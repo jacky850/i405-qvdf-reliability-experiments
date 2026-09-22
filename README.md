@@ -347,9 +347,9 @@ python scripts/b2_calibrate_sigma.py
 For each detector, Step B2 estimates the across-weekday parameters
 
 $$
-\mu_s=\operatorname{mean}_d\!\left[\ln(D_{s,d}/C_s)\right],
+\mu_s=\mathrm{mean}_d\left[\ln(D_{s,d}/C_s)\right],
 \qquad
-\sigma_s=\operatorname{sd}_d\!\left[\ln(D_{s,d}/C_s)\right].
+\sigma_s=\mathrm{sd}_d\left[\ln(D_{s,d}/C_s)\right].
 $$
 
 It then compares the two simplest candidate models:
@@ -358,7 +358,7 @@ $$
 \sigma(x)=a,
 \qquad
 \sigma(x)=a+bx,
-\qquad x=\operatorname{mean}_d(D/C).
+\qquad x=\mathrm{mean}_d(D/C).
 $$
 
 The comparison uses AICc and leave-one-detector-out RMSE. When the constant
