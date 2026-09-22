@@ -449,7 +449,7 @@ The percentile travel-time index is then
 
 $$
 \mathrm{TTI}_p =
-1+\alpha\exp\!\left(
+1+\alpha\exp\left(
 \beta\mu_{\ln(D/C)}+z_p\beta\sigma_{\ln(D/C)}
 \right),
 $$
@@ -458,7 +458,7 @@ and the expected TTI is
 
 $$
 E[\mathrm{TTI}] =
-1+\alpha\exp\!\left(
+1+\alpha\exp\left(
 \beta\mu_{\ln(D/C)}+
 \frac{1}{2}\beta^2\sigma_{\ln(D/C)}^2
 \right).
@@ -478,7 +478,7 @@ the multiplier approaches
 
 $$
 \gamma_p \approx
-\exp\!\left(
+\exp\left(
 z_p\beta\sigma-\frac{1}{2}\beta^2\sigma^2
 \right),
 $$
@@ -489,6 +489,12 @@ The resulting percentile envelope is shown below. The unshaded region marks
 the empirical detector-mean $D/C$ support; the shaded tails are extrapolation.
 
 ![Experiment B reliability envelope](figures/experiment_b_reliability_envelope.png)
+
+The dashed SHRP2 curve is an independent mapping of expected TTI, not a
+percentile from the fitted lognormal model. At mean $D/C=0.4$, the fitted model
+gives $\mathrm{TTI}_{95}=1.061$, whereas the SHRP2 relationship gives 1.196.
+Both approach 1 only in the free-flow limit $D/C\to0$, which lies outside the
+displayed range.
 
 Outputs:
 
