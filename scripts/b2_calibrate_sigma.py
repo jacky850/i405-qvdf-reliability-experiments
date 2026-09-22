@@ -7,6 +7,7 @@ import argparse
 import json
 import sys
 from pathlib import Path
+from statistics import NormalDist
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -91,6 +92,105 @@ def choose_model(comparison: pd.DataFrame, threshold: float) -> tuple[str, str]:
             "of the minimum."
         )
     return str(best["model"]), "Model with the minimum AICc selected."
+
+
+def make_lognormal_qq_figure(
+    detector_days: pd.DataFrame,
+    stats: pd.DataFrame,
+    output: Path,
+) -> None:
+    """Create detector-level normal Q-Q plots for ln(D/C)."""
+
+    normal = NormalDist()
+    panels: list[tuple[pd.Series, np.ndarray, np.ndarray]] = []
+    for row in stats.sort_values("mean_dc").itertuples(index=False):
+        observed = np.sort(
+            detector_days.loc[
+                detector_days["station_id"].eq(row.station_id), "ln_dc"
+            ].to_numpy(float)
+        )
+        count = len(observed)
+        theoretical = np.array(
+            [
+                normal.inv_cdf((rank - 0.375) / (count + 0.25))
+                for rank in range(1, count + 1)
+            ]
+        )
+        standardized = (observed - observed.mean()) / observed.std(ddof=1)
+        panels.append((row, theoretical, standardized))
+
+    limit = max(
+        3.0,
+        max(
+            float(np.max(np.abs(values)))
+            for _, theoretical, standardized in panels
+            for values in (theoretical, standardized)
+        ),
+    )
+    limit = float(np.ceil(limit * 2.0) / 2.0)
+    fig, axes = plt.subplots(3, 4, figsize=(13.2, 9.3), sharex=True, sharey=True)
+    line = np.array([-limit, limit])
+    for axis, (row, theoretical, standardized) in zip(axes.flat, panels):
+        axis.plot(line, line, color="#0f766e", linewidth=1.5, zorder=1)
+        axis.scatter(
+            theoretical,
+            standardized,
+            s=18,
+            color="#2563eb",
+            alpha=0.68,
+            edgecolor="white",
+            linewidth=0.3,
+            zorder=2,
+        )
+        axis.set_title(str(row.station_name), fontsize=10.5, weight="bold")
+        axis.text(
+            0.04,
+            0.96,
+            (
+                f"Station {int(row.station_id)}\n"
+                f"mean D/C = {float(row.mean_dc):.3f}\n"
+                f"Q-Q R² = {float(row.normal_qq_r2):.3f}"
+            ),
+            transform=axis.transAxes,
+            ha="left",
+            va="top",
+            fontsize=8.2,
+            color="#334155",
+        )
+        axis.set_xlim(-limit, limit)
+        axis.set_ylim(-limit, limit)
+        axis.grid(alpha=0.18)
+        for side in ("top", "right"):
+            axis.spines[side].set_visible(False)
+
+    median_r2 = float(stats["normal_qq_r2"].median())
+    minimum_r2 = float(stats["normal_qq_r2"].min())
+    fig.suptitle(
+        r"Normal Q-Q plots of daily $\ln(D/C)$ by detector",
+        x=0.06,
+        y=0.985,
+        ha="left",
+        fontsize=20,
+        weight="bold",
+    )
+    fig.text(
+        0.06,
+        0.95,
+        (
+            f"12 PeMS detectors, 1,184 detector-days  |  "
+            f"median Q-Q R² = {median_r2:.3f}  |  minimum = {minimum_r2:.3f}"
+        ),
+        ha="left",
+        va="top",
+        fontsize=11,
+        color="#334155",
+    )
+    fig.supxlabel("Theoretical standard-normal quantile", fontsize=12)
+    fig.supylabel(r"Standardized observed $\ln(D/C)$ quantile", fontsize=12)
+    fig.tight_layout(rect=(0.04, 0.04, 1.0, 0.92))
+    output.parent.mkdir(exist_ok=True)
+    fig.savefig(output, dpi=220, bbox_inches="tight")
+    plt.close(fig)
 
 
 def make_figure(
@@ -180,6 +280,11 @@ def main() -> None:
         stats, comparison, selected_model,
         float(config["dc_analysis_min"]), float(config["dc_analysis_max"]),
         ROOT / "figures" / "experiment_b_sigma_calibration.png",
+    )
+    make_lognormal_qq_figure(
+        detector_days,
+        stats,
+        ROOT / "figures" / "experiment_b_lognormal_qq.png",
     )
 
     constant = comparison.set_index("model").loc["constant"]

@@ -352,6 +352,13 @@ $$
 \sigma_s=\mathrm{sd}_d\left[\ln(D_{s,d}/C_s)\right].
 $$
 
+The detector-level normal Q-Q plots below assess the lognormal assumption
+directly. Across the 12 detectors, the median Q-Q $R^2$ is 0.964 and the
+minimum is 0.912. The generally linear patterns support using a lognormal
+approximation while retaining visible detector-level tail departures.
+
+![Experiment B detector-level lognormal Q-Q plots](figures/experiment_b_lognormal_qq.png)
+
 It then compares the two simplest candidate models:
 
 $$
@@ -375,6 +382,8 @@ Outputs:
 - `results/b2_sigma_curve.csv`: selected model from 0.4 to 1.3 with an
   empirical-support flag
 - `results/b2_summary.json`: selected model and main diagnostics
+- `figures/experiment_b_lognormal_qq.png`: detector-level normal Q-Q plots for
+  $\ln(D/C)$
 - `figures/experiment_b_sigma_calibration.png`: clean calibration figure
 
 The selected model for the current sample is the constant specification,
