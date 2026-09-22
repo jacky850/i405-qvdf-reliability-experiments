@@ -29,16 +29,14 @@ $\mathcal{E}_{l,d,a}$ denote the detected congestion episode and let
 $\Delta t=5/60$ hour. The variables are defined as
 
 $$
-D_{l,d,a}
-=
+D_{l,d,a} =
 \sum_{t\in\mathcal{E}_{l,d,a}}q_{l,d,t}\,\Delta t,
 \qquad
 [D]=\mathrm{veh/link},
 $$
 
 $$
-C_l
-=
+C_l =
 Q_{0.95}\!\left(
 \left\{q_{l,d,t}:06{:}00\le t<10{:}00\right\}
 \right),
@@ -284,8 +282,7 @@ $\mathcal W_{d}$ be the set of all consecutive 12-bin windows in the AM
 period. Daily demand is
 
 $$
-D_{s,d}
-=
+D_{s,d} =
 \max_{w\in\mathcal W_d}
 \left(\frac{1}{12}\sum_{t\in w}q_{s,d,t}\right),
 \qquad
@@ -297,8 +294,7 @@ corridor-wide 95th-percentile per-lane flow from every fully observed I-405
 South mainline AM cell in the selected 100 weekdays:
 
 $$
-c_{95}
-=
+c_{95} =
 Q_{0.95}\!\left(\left\{\frac{q_{s,d,t}}{L_s}:\text{PeMS percent observed}=100\right\}\right),
 \qquad
 C_s=c_{95}L_s,
@@ -442,8 +438,7 @@ $$
 The percentile travel-time index is then
 
 $$
-\mathrm{TTI}_p
-=
+\mathrm{TTI}_p =
 1+\alpha\exp\!\left(
 \beta\mu_{\ln(D/C)}+z_p\beta\sigma_{\ln(D/C)}
 \right),
@@ -452,8 +447,7 @@ $$
 and the expected TTI is
 
 $$
-E[\mathrm{TTI}]
-=
+E[\mathrm{TTI}] =
 1+\alpha\exp\!\left(
 \beta\mu_{\ln(D/C)}+
 \frac{1}{2}\beta^2\sigma_{\ln(D/C)}^2
@@ -473,8 +467,7 @@ When delay dominates free-flow time and $\beta$ and $\sigma$ are stable,
 the multiplier approaches
 
 $$
-\gamma_p
-\approx
+\gamma_p \approx
 \exp\!\left(
 z_p\beta\sigma-\frac{1}{2}\beta^2\sigma^2
 \right),
