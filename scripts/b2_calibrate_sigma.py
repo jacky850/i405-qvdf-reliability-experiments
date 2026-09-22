@@ -142,12 +142,15 @@ def make_lognormal_qq_figure(
             linewidth=0.3,
             zorder=2,
         )
-        axis.set_title(str(row.station_name), fontsize=10.5, weight="bold")
+        axis.set_title(
+            f"PeMS detector {int(row.station_id)}",
+            fontsize=10.5,
+            weight="bold",
+        )
         axis.text(
             0.04,
             0.96,
             (
-                f"Station {int(row.station_id)}\n"
                 f"mean D/C = {float(row.mean_dc):.3f}\n"
                 f"Q-Q R² = {float(row.normal_qq_r2):.3f}"
             ),
