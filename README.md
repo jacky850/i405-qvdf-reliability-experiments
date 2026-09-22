@@ -3,9 +3,9 @@
 This small, reproducible experiment tests how the congestion speed threshold
 changes the fitted duration relationship
 
-\[
+$$
 P = f_d x^n,
-\]
+$$
 
 where `P` is the longest AM congestion episode in hours. Five thresholds are
 tested: `0.90`, `0.95`, `1.00`, `1.05`, and `1.10` times the S3 speed at
@@ -24,19 +24,19 @@ capacity.
 
 ## Definitions and units
 
-For link \(l\), day \(d\), and threshold multiplier \(a\), let
-\(\mathcal{E}_{l,d,a}\) denote the detected congestion episode and let
-\(\Delta t=5/60\) hour. The variables are defined as
+For link $l$, day $d$, and threshold multiplier $a$, let
+$\mathcal{E}_{l,d,a}$ denote the detected congestion episode and let
+$\Delta t=5/60$ hour. The variables are defined as
 
-\[
+$$
 D_{l,d,a}
 =
 \sum_{t\in\mathcal{E}_{l,d,a}}q_{l,d,t}\,\Delta t,
 \qquad
 [D]=\mathrm{veh/link},
-\]
+$$
 
-\[
+$$
 C_l
 =
 Q_{0.95}\!\left(
@@ -44,9 +44,9 @@ Q_{0.95}\!\left(
 \right),
 \qquad
 [C]=\mathrm{veh/(h\cdot link)},
-\]
+$$
 
-\[
+$$
 \left[\frac{D}{C}\right]=\mathrm{h},
 \qquad
 N_{l,d,a}=\left|\mathcal{E}_{l,d,a}\right|,
@@ -54,16 +54,16 @@ N_{l,d,a}=\left|\mathcal{E}_{l,d,a}\right|,
 P_{l,d,a}=N_{l,d,a}\Delta t,
 \qquad
 [P]=\mathrm{h},
-\]
+$$
 
-\[
+$$
 P=f_d\left(\frac{D}{C}\right)^n.
-\]
+$$
 
-Both \(q\) and \(C\) are whole-link quantities over all lanes. A single fixed
-\(C_l\) is used for every day and every threshold tested on link \(l\).
-Here, uppercase \(N_{l,d,a}\) is the number of 5-minute bins in the detected
-episode. It is distinct from lowercase \(n\), the fitted exponent in the QVDF.
+Both $q$ and $C$ are whole-link quantities over all lanes. A single fixed
+$C_l$ is used for every day and every threshold tested on link $l$.
+Here, uppercase $N_{l,d,a}$ is the number of 5-minute bins in the detected
+episode. It is distinct from lowercase $n$, the fitted exponent in the QVDF.
 
 ## Method, one step at a time
 
@@ -108,8 +108,8 @@ python scripts/step3_detect_threshold_episodes.py
 Speed is smoothed by a centered 3-bin median. A candidate episode must contain
 at least three consecutive 5-minute bins at or below the selected threshold.
 The longest episode is retained; ties use the lower minimum speed and then the
-earlier start. For each retained episode, the script computes \(P\), \(D\),
-\(C\), and \(D/C\) using the definitions above.
+earlier start. For each retained episode, the script computes $P$, $D$,
+$C$, and $D/C$ using the definitions above.
 
 Outputs:
 
@@ -164,11 +164,22 @@ python scripts/run_all.py
 | 1.05 | 3.083 | 1.164 | 1.316 | 0.909 | 0.236 |
 | 1.10 | 3.250 | 1.238 | 1.209 | 0.874 | 0.274 |
 
+The four-panel summary shows how the median congestion duration, median
+$D/C$, $f_d$, and $n$ change as the speed threshold moves around the speed at
+capacity.
+
+![Experiment A threshold sensitivity](figures/threshold_parameter_sensitivity.png)
+
 Relative to the `1.00 x vc` case, `f_d` changes by at most 7.9% and `n` by at
 most 7.9%. The relationship is therefore reasonably stable from `0.90` through
 `1.05 x vc`. At `1.10 x vc`, `n` drops by 7.9%, R-squared falls to 0.874, and
 RMSE rises to 0.274 hours, showing that the highest threshold begins to weaken
 the fit.
+
+The fitted duration curves below show the underlying link-day observations at
+each tested threshold.
+
+![Experiment A fitted duration curves](figures/duration_vs_dc.png)
 
 ## Folder structure
 
@@ -234,15 +245,15 @@ clock in `America/Los_Angeles`; the September sample has UTC offset `-07:00`.
 Experiment B treats daily demand-to-capacity as stochastic and prepares the
 empirical distribution of
 
-\[
+$$
 X_{s,d}=\frac{D_{s,d}}{C_s},
 \qquad
 Y_{s,d}=\ln X_{s,d},
-\]
+$$
 
 for PeMS mainline detector (s) and weekday (d). This first step prepares the
 quality-controlled detector-day sample. The next step estimates
-\(\sigma_{\ln(D/C)}\) as a function of mean (D/C) and uses it in the QVDF
+$\sigma_{\ln(D/C)}$ as a function of mean (D/C) and uses it in the QVDF
 reliability envelope.
 
 ## Experiment B scope
@@ -268,24 +279,24 @@ artificially reduce the estimated day-to-day variance.
 
 ## Experiment B definitions
 
-Let (q_{s,d,t}) be the whole-detector flow rate at 5-minute bin (t), and let
-\(\mathcal W_{d}\) be the set of all consecutive 12-bin windows in the AM
+Let $q_{s,d,t}$ be the whole-detector flow rate at 5-minute bin $t$, and let
+$\mathcal W_{d}$ be the set of all consecutive 12-bin windows in the AM
 period. Daily demand is
 
-\[
+$$
 D_{s,d}
 =
 \max_{w\in\mathcal W_d}
 \left(\frac{1}{12}\sum_{t\in w}q_{s,d,t}\right),
 \qquad
 [D]=\mathrm{veh/(h\cdot detector)}.
-\]
+$$
 
 Capacity is fixed for every day but estimated from PeMS. First calculate the
 corridor-wide 95th-percentile per-lane flow from every fully observed I-405
 South mainline AM cell in the selected 100 weekdays:
 
-\[
+$$
 c_{95}
 =
 Q_{0.95}\!\left(\left\{\frac{q_{s,d,t}}{L_s}:\text{PeMS percent observed}=100\right\}\right),
@@ -293,15 +304,15 @@ Q_{0.95}\!\left(\left\{\frac{q_{s,d,t}}{L_s}:\text{PeMS percent observed}=100\ri
 C_s=c_{95}L_s,
 \qquad
 [C]=\mathrm{veh/(h\cdot detector)},
-\]
+$$
 
-where (L_s) is the PeMS metadata lane count. In this sample,
-\(c_{95}=1{,}872\) veh/h/lane. A common empirical per-lane value is used rather
+where $L_s$ is the PeMS metadata lane count. In this sample,
+$c_{95}=1{,}872$ veh/h/lane. A common empirical per-lane value is used rather
 than a separate P95 for each station. A station-specific P95 would mechanically
-normalize every station's (D/C) close to one and remove the loading range
-needed to estimate whether variability changes with mean (D/C). Cube link
+normalize every station's $D/C$ close to one and remove the loading range
+needed to estimate whether variability changes with mean $D/C$. Cube link
 lane counts are not used because several detector-to-network matches cross
-network segmentation boundaries. Both (D) and (C) are whole-detector,
+network segmentation boundaries. Both $D$ and $C$ are whole-detector,
 all-lane rates.
 
 The capacity pool contains 87,238 fully observed 5-minute cells from 33 PeMS
@@ -324,8 +335,8 @@ Outputs:
 - `data/i405s_pems_am_100_weekdays_capacity_pool.csv.gz`: fully observed cells
   used to estimate the common PeMS P95 per-lane capacity
 - `results/b1_sample_dates.csv`: the frozen 100-date sample
-- `results/b1_detector_day_dc.csv`: one row per detector-day with (D), (C),
-  (D/C), \(\ln(D/C)\), and peak-hour speed/TTI diagnostics
+- `results/b1_detector_day_dc.csv`: one row per detector-day with $D$, $C$,
+  $D/C$, $\ln(D/C)$, and peak-hour speed/TTI diagnostics
 - `results/b1_detector_inventory.csv`: detector metadata and preliminary
   across-day log statistics
 - `results/b1_data_quality_summary.json`: machine-readable sample audit
@@ -344,20 +355,20 @@ python scripts/b2_calibrate_sigma.py
 
 For each detector, Step B2 estimates the across-weekday parameters
 
-\[
+$$
 \mu_s=\operatorname{mean}_d\!\left[\ln(D_{s,d}/C_s)\right],
 \qquad
 \sigma_s=\operatorname{sd}_d\!\left[\ln(D_{s,d}/C_s)\right].
-\]
+$$
 
 It then compares the two simplest candidate models:
 
-\[
+$$
 \sigma(x)=a,
 \qquad
 \sigma(x)=a+bx,
 \qquad x=\operatorname{mean}_d(D/C).
-\]
+$$
 
 The comparison uses AICc and leave-one-detector-out RMSE. When the constant
 model is within 2 AICc units of the minimum, the constant is selected by
@@ -366,7 +377,7 @@ parsimony.
 Outputs:
 
 - `results/b2_detector_log_stats.csv`: one row per detector with
-  \(\mu_{\ln(D/C)}\), \(\sigma_{\ln(D/C)}\), skewness, kurtosis, and normal Q-Q
+  $\mu_{\ln(D/C)}$, $\sigma_{\ln(D/C)}$, skewness, kurtosis, and normal Q-Q
   correlation
 - `results/b2_dc_bins.csv`: 0.1-wide mean-(D/C) bin summary
 - `results/b2_sigma_model_comparison.csv`: constant-versus-linear diagnostics
@@ -377,9 +388,9 @@ Outputs:
 
 The selected model for the current sample is the constant specification,
 
-\[
+$$
 \sigma_{\ln(D/C)}=0.0376.
-\]
+$$
 
 The linear alternative improves AICc by only 1.71 units, below the configured
 two-unit threshold. The constant is therefore retained as the simpler model.
@@ -397,77 +408,77 @@ python scripts/b3_reliability_envelope.py
 
 The daily PeMS peak-hour observations calibrate the travel-time branch
 
-\[
+$$
 \mathrm{TTI}=1+\alpha(D/C)^\beta
-\]
+$$
 
 by nonlinear least squares in observed TTI space. This calibration is separate
-from Experiment A's duration parameters \(f_d\) and \(n\). It supplies the
+from Experiment A's duration parameters $f_d$ and $n$. It supplies the
 travel-time parameters that were not present in the existing duration-only
 code.
 
 For the current 1,184 detector-days, the fitted values are
 
-\[
+$$
 \alpha=0.278,
 \qquad
 \beta=1.772.
-\]
+$$
 
-The pooled fit has \(R^2=0.129\), TTI RMSE = 0.166, and TTI MAE = 0.126.
+The pooled fit has $R^2=0.129$, TTI RMSE = 0.166, and TTI MAE = 0.126.
 This is a weak delay fit. It is sufficient to exercise the reliability
 calculation end to end, but the resulting envelope is provisional rather than
 a validated forecasting relationship. More days can stabilize each detector's
 distribution; broader detectors, periods, and facility types are also needed
 to test whether one pooled delay curve is defensible.
 
-For an arithmetic mean loading \(x=E[D/C]\), the lognormal location parameter
+For an arithmetic mean loading $x=E[D/C]$, the lognormal location parameter
 is
 
-\[
+$$
 \mu_{\ln(D/C)}=\ln x-\frac{1}{2}\sigma_{\ln(D/C)}^2.
-\]
+$$
 
 The percentile travel-time index is then
 
-\[
+$$
 \mathrm{TTI}_p
 =
 1+\alpha\exp\!\left(
 \beta\mu_{\ln(D/C)}+z_p\beta\sigma_{\ln(D/C)}
 \right),
-\]
+$$
 
 and the expected TTI is
 
-\[
+$$
 E[\mathrm{TTI}]
 =
 1+\alpha\exp\!\left(
 \beta\mu_{\ln(D/C)}+
 \frac{1}{2}\beta^2\sigma_{\ln(D/C)}^2
 \right).
-\]
+$$
 
-The output includes \(\mathrm{TTI}_{50}\), \(\mathrm{TTI}_{80}\),
-\(\mathrm{TTI}_{90}\), \(\mathrm{TTI}_{95}\), the derived multiplier
-\(\gamma_p=\mathrm{TTI}_p/E[\mathrm{TTI}]\), and the SHRP2 L03 benchmark
+The output includes $\mathrm{TTI}_{50}$, $\mathrm{TTI}_{80}$,
+$\mathrm{TTI}_{90}$, $\mathrm{TTI}_{95}$, the derived multiplier
+$\gamma_p=\mathrm{TTI}_p/E[\mathrm{TTI}]$, and the SHRP2 L03 benchmark
 
-\[
+$$
 \mathrm{TTI}_{95}^{\mathrm{SHRP2}}
 =1+3.67\ln(E[\mathrm{TTI}]).
-\]
+$$
 
-When delay dominates free-flow time and \(\beta\) and \(\sigma\) are stable,
+When delay dominates free-flow time and $\beta$ and $\sigma$ are stable,
 the multiplier approaches
 
-\[
+$$
 \gamma_p
 \approx
 \exp\!\left(
 z_p\beta\sigma-\frac{1}{2}\beta^2\sigma^2
 \right),
-\]
+$$
 
 which explains when an approximately fixed reliability multiplier can emerge.
 
