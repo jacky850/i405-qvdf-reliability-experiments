@@ -174,11 +174,6 @@ most 7.9%. The relationship is therefore reasonably stable from `0.90` through
 RMSE rises to 0.274 hours, showing that the highest threshold begins to weaken
 the fit.
 
-The fitted duration curves below show the underlying link-day observations at
-each tested threshold.
-
-![Experiment A fitted duration curves](figures/duration_vs_dc.png)
-
 ## Folder structure
 
 ```text
