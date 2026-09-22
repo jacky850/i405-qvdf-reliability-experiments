@@ -1,0 +1,35 @@
+{
+  "dataset": "Caltrans PeMS",
+  "corridor": "I-405 South",
+  "period": "06:00-10:00",
+  "selected_weekdays": 100,
+  "retained_unique_dates": 99,
+  "dates_without_any_retained_detector_day": [
+    "2025-10-07"
+  ],
+  "first_date": "2025-06-02",
+  "last_date": "2025-10-23",
+  "excluded_dates": [
+    "2025-06-19",
+    "2025-07-04",
+    "2025-09-01",
+    "2025-10-13"
+  ],
+  "strict_quality_rule": "all 48 AM bins have pct_observed = 100",
+  "minimum_complete_days_per_detector": 80,
+  "eligible_detectors": 12,
+  "represented_network_links": 9,
+  "detector_days": 1184,
+  "five_min_rows": 56832,
+  "mean_dc_min_across_detectors": 0.556242985409652,
+  "mean_dc_max_across_detectors": 1.0049952032094889,
+  "sigma_ln_dc_min": 0.02915500008260552,
+  "sigma_ln_dc_max": 0.05037096691406957,
+  "detector_days_in_0p4_to_1p3": 1184,
+  "capacity_percentile": 0.95,
+  "capacity_pool": "all fully observed I-405 South mainline AM detector cells in the selected 100 weekdays",
+  "capacity_pool_cells": 87238,
+  "capacity_pool_detectors": 33,
+  "capacity_per_lane_vph": 1872.0,
+  "capacity_definition": "C = pooled PeMS P95 flow per lane times PeMS station lane count"
+}

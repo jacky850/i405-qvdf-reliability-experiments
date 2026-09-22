@@ -1,0 +1,19 @@
+{
+  "analysis_unit": "PeMS mainline detector-day",
+  "stochastic_dimension": "variation across weekdays within each detector",
+  "detectors": 12,
+  "detector_days": 1184,
+  "empirical_mean_dc_min": 0.556242985409652,
+  "empirical_mean_dc_max": 1.0049952032094889,
+  "selected_sigma_model": "constant",
+  "selected_sigma_intercept": 0.037560509377250154,
+  "selected_sigma_slope": 0.0,
+  "selection_reason": "Constant selected by parsimony because its AICc is within 2 of the minimum.",
+  "constant_aicc": -116.18788395025297,
+  "linear_aicc": -117.89307998511605,
+  "constant_loocv_rmse": 0.00779595355988017,
+  "linear_loocv_rmse": 0.006929379790192717,
+  "median_normal_qq_r2": 0.9642881419057685,
+  "minimum_normal_qq_r2": 0.9120449112189926,
+  "extrapolation_note": "The fitted sample does not empirically cover the full 0.4-1.3 range. Predictions outside the observed detector-mean D/C range are extrapolation."
+}

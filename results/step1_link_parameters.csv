@@ -1,0 +1,4 @@
+corridor,road_order,link_id,direction,milepost,station_count,observations_5min,days,vf_mph,capacity_vph_link,vc_mph,vf_quantile,capacity_quantile,capacity_speed_method
+I405_S,1,L405S-132,S,15.715000,3,720,15,64.483334,8068.000000,45.596602,0.950000,0.950000,s3_vf_over_sqrt2
+I405_S,2,L405S-115,S,16.290000,1,720,15,66.105000,7668.600000,46.743294,0.950000,0.950000,s3_vf_over_sqrt2
+I405_S,3,L405S-114,S,16.450000,2,720,15,64.302500,6600.300000,45.468734,0.950000,0.950000,s3_vf_over_sqrt2

@@ -1,0 +1,29 @@
+{
+  "common_support_link_days": 45,
+  "thresholds": [
+    0.9,
+    0.95,
+    1.0,
+    1.05,
+    1.1
+  ],
+  "primary_fit_basis": "duration_qvdf_capacity_equivalent_hours",
+  "basis_note": "congested passed volume divided by hourly capacity; units are hours, not dimensionless rate-based D/C",
+  "pooled_fd_range": [
+    1.1640519043783932,
+    1.286302016527808
+  ],
+  "pooled_n_range": [
+    1.208999999999977,
+    1.3159999999999652
+  ],
+  "pooled_r_squared_range": [
+    0.8741358908980871,
+    0.9487756636934308
+  ],
+  "pooled_rmse_range_h": [
+    0.19858958903041593,
+    0.2737155684929126
+  ],
+  "any_primary_n_at_boundary": false
+}
