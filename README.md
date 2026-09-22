@@ -37,8 +37,8 @@ $$
 
 $$
 C_l =
-Q_{0.95}\!\left(
-\left\{q_{l,d,t}:06{:}00\le t<10{:}00\right\}
+Q_{0.95}\left(
+\left\lbrace q_{l,d,t}:06{:}00\le t<10{:}00\right\rbrace
 \right),
 \qquad
 [C]=\mathrm{veh/(h\cdot link)},
@@ -295,7 +295,7 @@ South mainline AM cell in the selected 100 weekdays:
 
 $$
 c_{95} =
-Q_{0.95}\!\left(\left\{\frac{q_{s,d,t}}{L_s}:\text{PeMS percent observed}=100\right\}\right),
+Q_{0.95}\left(\left\lbrace \frac{q_{s,d,t}}{L_s}:\text{PeMS percent observed}=100\right\rbrace\right),
 \qquad
 C_s=c_{95}L_s,
 \qquad
