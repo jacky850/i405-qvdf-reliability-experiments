@@ -389,6 +389,12 @@ This does not establish that loading can never affect variability; it states
 that the current 12-detector sample does not support the extra slope strongly
 enough.
 
+The detector-level estimates, selected constant model, and linear alternative
+are shown below. Shaded regions fall outside the observed detector-mean $D/C$
+range.
+
+![Experiment B day-to-day D/C variability calibration](figures/experiment_b_sigma_calibration.png)
+
 ## Step B3 - Fit delay and create the reliability envelope
 
 Run:
@@ -469,6 +475,11 @@ z_p\beta\sigma-\frac{1}{2}\beta^2\sigma^2
 $$
 
 which explains when an approximately fixed reliability multiplier can emerge.
+
+The resulting percentile envelope is shown below. The unshaded region marks
+the empirical detector-mean $D/C$ support; the shaded tails are extrapolation.
+
+![Experiment B reliability envelope](figures/experiment_b_reliability_envelope.png)
 
 Outputs:
 
