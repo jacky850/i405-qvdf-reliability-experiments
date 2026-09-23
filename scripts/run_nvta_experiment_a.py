@@ -549,8 +549,8 @@ def make_figure(summary: pd.DataFrame, output: Path, title: str) -> None:
     labels = [f"{value:.2f}" for value in data["threshold_multiplier"]]
     panels = [
         ("median_duration_h", "Median P (h)"),
-        ("median_d_over_c_h", "Median D/C (h)"),
-        ("fd", "$f_d$ (h)"),
+        ("median_d_over_c_h", "Median $X_E$ (h)"),
+        ("fd", "$f_d$ (h$^{1-n}$)"),
         ("n", "$n$"),
     ]
     figure, axes = plt.subplots(2, 2, figsize=(9, 6.4), constrained_layout=True)

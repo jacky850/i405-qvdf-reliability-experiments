@@ -387,7 +387,7 @@ def plot_variance_shares(tmc: pd.DataFrame, output: Path) -> None:
         positions,
         100.0 * plot["demand_explained_share_assuming_independence"],
         color="#4e79a7",
-        label="D/C variability",
+        label="Loading variability",
     )
     axis.barh(
         positions,

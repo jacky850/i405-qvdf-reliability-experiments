@@ -252,20 +252,16 @@ def plot_relationship(data: pd.DataFrame, local_k: float, k_low: float, k_high: 
         250,
     )
     figure, axis = plt.subplots(figsize=(7.4, 5.6), constrained_layout=True)
-    colors = {"high": "#1f77b4", "medium": "#f28e2b"}
-    markers = {"high": "o", "medium": "s"}
-    for reliability, group in data.groupby("parameter_reliability", sort=True):
-        axis.scatter(
-            group["observed_mean_tti"],
-            group["observed_pti95"],
-            s=62,
-            color=colors[reliability],
-            marker=markers[reliability],
-            edgecolors="white",
-            linewidths=0.7,
-            label=f"Observed, {reliability} fit",
-            zorder=3,
-        )
+    axis.scatter(
+        data["observed_mean_tti"],
+        data["observed_pti95"],
+        s=62,
+        color="#2a78d6",
+        edgecolors="white",
+        linewidths=0.7,
+        label=f"Observed TMCs (n={len(data)})",
+        zorder=3,
+    )
     axis.plot(
         x_grid,
         1.0 + SHRP2_K * np.log(x_grid),
@@ -289,21 +285,11 @@ def plot_relationship(data: pd.DataFrame, local_k: float, k_low: float, k_high: 
         alpha=0.14,
         label="Local k bootstrap 95% interval",
     )
-    labels = data.assign(abs_shrp2_error=data["shrp2_error_predicted_minus_observed"].abs()).nlargest(2, "abs_shrp2_error")
-    for offset, row in enumerate(labels.itertuples(index=False)):
-        axis.annotate(
-            row.tmc_code,
-            (row.observed_mean_tti, row.observed_pti95),
-            xytext=(8, -13 - 9 * offset),
-            textcoords="offset points",
-            fontsize=8,
-            arrowprops={"arrowstyle": "-", "color": "#666666", "lw": 0.6},
-        )
     axis.set_xlabel("Observed mean TTI")
     axis.set_ylabel("Observed PTI95")
     axis.set_title(
         "I-95 South GP PM: PTI95-TTI relationship\n"
-        "Accepted congestion episodes; 10 link-specific high/medium fits",
+        "Accepted congestion episodes; 10 TMCs",
         fontsize=12,
     )
     axis.grid(color="#d9d9d9", linewidth=0.8)

@@ -34,6 +34,7 @@ C3 = NVTA_DIR / "c3-qvdf-reliability" / "output"
 C4 = NVTA_DIR / "c4-variability-decomposition" / "output"
 C5 = NVTA_DIR / "c5-pti-tti-comparison" / "output"
 C6 = NVTA_DIR / "c6-managed-lane-comparison" / "output"
+B = NVTA_DIR / "b-dc-variability" / "output"
 KEY = REPO_ROOT / "key_results"
 
 BOOTSTRAP_REPLICATES = 2000
@@ -118,57 +119,66 @@ def style(axis: plt.Axes) -> None:
     axis.spines[["top", "right"]].set_visible(False)
 
 
-def plot(day: pd.DataFrame, tmc: pd.DataFrame, table: pd.DataFrame, output: Path) -> None:
+def set_rc() -> None:
     plt.rcParams.update(
         {"font.size": 9.5, "axes.edgecolor": INK_SECONDARY, "axes.labelcolor": INK,
          "xtick.color": INK_SECONDARY, "ytick.color": INK_SECONDARY}
     )
-    figure, axes = plt.subplots(1, 3, figsize=(13.0, 4.4), constrained_layout=True)
+
+
+def plot_c1(day: pd.DataFrame, table: pd.DataFrame, output: Path) -> None:
+    """Memo scatterplots 1-2: D/C vs P and P vs TTI, one point per episode-day."""
+    set_rc()
+    figure, axes = plt.subplots(1, 2, figsize=(9.6, 4.2), constrained_layout=True)
 
     def stat(pair: str) -> str:
         row = table[table["pair"].eq(pair)].iloc[0]
-        return f"Pearson {row['pearson_r']:.2f}, Spearman {row['spearman_rho']:.2f} (n={row['n']} {row['unit']})"
-
-    dc_low, dc_high = day["dc"].min(), day["dc"].max()
+        return f"Pearson {row['pearson_r']:.2f}, Spearman {row['spearman_rho']:.2f} (n = {row['n']} {row['unit']})"
 
     axis = axes[0]
     axis.scatter(day["dc"], day["P_hr"], s=22, color=BLUE, edgecolors="white", linewidths=0.6, alpha=0.9)
-    axis.set_xlabel("Episode D/C = episode demand / PM capacity")
+    axis.set_xlabel(r"Episode loading $x = X_E/4\,$h")
     axis.set_ylabel("Congestion duration P (h)")
-    axis.set_title(f"(a) D/C vs duration (shared episode: consistency check)\n{stat('D/C vs P')}", loc="left", fontsize=9.5, color=INK)
+    axis.set_title(f"(a) $x$ vs $P$ (shared episode)\n{stat('D/C vs P')}", loc="left", fontsize=9.5, color=INK)
 
     axis = axes[1]
     axis.scatter(day["P_hr"], day["tti"], s=22, color=BLUE, edgecolors="white", linewidths=0.6, alpha=0.9)
     axis.set_xlabel("Congestion duration P (h)")
     axis.set_ylabel("Daily PM TTI")
-    axis.set_title(f"(b) Duration vs travel time\n{stat('P vs TTI')}", loc="left", fontsize=9.5, color=INK)
-
-    axis = axes[2]
-    axis.scatter(tmc["observed_pti95"], tmc["model_pti95"], s=46, color=BLUE, edgecolors="white", linewidths=0.8, zorder=3)
-    values = np.r_[tmc["observed_pti95"], tmc["model_pti95"]]
-    low, high = 1.0, float(values.max()) + 0.4
-    axis.plot([low, high], [low, high], color=INK_SECONDARY, ls="--", lw=1.1)
-    axis.text(high - 0.55, high - 0.2, "1:1", ha="right", fontsize=8.5, color=INK_SECONDARY)
-    axis.set_xlim(low, high)
-    axis.set_ylim(low, high)
-    axis.set_aspect("equal", adjustable="box")
-    error = tmc["model_pti95"] - tmc["observed_pti95"]
-    rho = correlation(tmc["observed_pti95"], tmc["model_pti95"], "spearman")
-    axis.set_xlabel("Observed PTI95")
-    axis.set_ylabel("QVDF-implied PTI95")
-    axis.set_title(
-        f"(c) Observed vs QVDF-implied PTI95\nSpearman {rho:.2f}, MAE {error.abs().mean():.2f}, "
-        f"bias {error.mean():+.2f} (n={len(tmc)} TMCs)",
-        loc="left", fontsize=9.5, color=INK,
-    )
+    axis.set_title(f"(b) P vs TTI\n{stat('P vs TTI')}", loc="left", fontsize=9.5, color=INK)
 
     for axis in axes:
         style(axis)
-    figure.suptitle(
-        "I-95 SB GP PM, October 2025 weekdays: accepted congestion episode-days on 10 TMCs with "
-        f"link-specific high/medium QVDF fits. Observed D/C support {dc_low:.2f}–{dc_high:.2f}.",
-        x=0.01, ha="left", fontsize=9, color=INK_SECONDARY,
-    )
+    figure.savefig(output, dpi=200, bbox_inches="tight")
+    plt.close(figure)
+
+
+def plot_c3(tmc: pd.DataFrame, output: Path) -> None:
+    """Memo scatterplot 3 plus the gamma95 check: observed vs QVDF-implied."""
+    set_rc()
+    figure, axes = plt.subplots(1, 2, figsize=(9.6, 4.6), constrained_layout=True)
+    for axis, (label, observed, model, pad) in zip(
+        axes,
+        [("PTI95", "observed_pti95", "model_pti95", 0.4), ("gamma95 = PTI95 / TTI", "observed_gamma95", "model_gamma95", 0.08)],
+    ):
+        axis.scatter(tmc[observed], tmc[model], s=46, color=BLUE, edgecolors="white", linewidths=0.8, zorder=3)
+        values = np.r_[tmc[observed], tmc[model]]
+        low, high = 1.0, float(values.max()) + pad
+        axis.plot([low, high], [low, high], color=INK_SECONDARY, ls="--", lw=1.1)
+        axis.text(high, high, "1:1 ", ha="right", va="bottom", fontsize=8.5, color=INK_SECONDARY)
+        axis.set_xlim(low, high)
+        axis.set_ylim(low, high)
+        axis.set_aspect("equal", adjustable="box")
+        error = tmc[model] - tmc[observed]
+        rho = correlation(tmc[observed], tmc[model], "spearman")
+        axis.set_xlabel(f"Observed {label}")
+        axis.set_ylabel(f"QVDF-implied {label}")
+        axis.set_title(
+            f"({'a' if observed == 'observed_pti95' else 'b'}) {label}\nSpearman {rho:.2f}, MAE {error.abs().mean():.2f}, "
+            f"bias {error.mean():+.2f} (n = {len(tmc)} TMCs)",
+            loc="left", fontsize=9.5, color=INK,
+        )
+        style(axis)
     figure.savefig(output, dpi=200, bbox_inches="tight")
     plt.close(figure)
 
@@ -186,7 +196,16 @@ def key_numbers(table: pd.DataFrame) -> pd.DataFrame:
     def corr(pair: str, column: str) -> float:
         return float(table.loc[table["pair"].eq(pair), column].iloc[0])
 
+    b_models = pd.read_csv(B / "b_sigma_model_comparison.csv")
+    b_models = b_models[b_models["selected"]].set_index("scope")
+    b_tmc = pd.read_csv(B / "b_tmc_dc_statistics.csv")
+    b_check = pd.read_csv(B / "b_planning_sigma_pti95_metrics.csv").set_index("sigma_source")
     rows = [
+        ("B", "Share of TMCs passing Shapiro-Wilk on ln(D/C)", float((b_tmc["shapiro_p_ln_dc"] > 0.05).mean()), "share", f"{len(b_tmc)} GP TMCs"),
+        ("B", "Share of TMCs where ln(D/C) fits the normal better than D/C", float((b_tmc["qq_r2_ln_dc"] > b_tmc["qq_r2_dc"]).mean()), "share", f"{len(b_tmc)} GP TMCs"),
+        ("B", "sigma_ln(D/C), I-95 SB PM (constant model)", float(b_models.loc["I-95 SB PM", "intercept"]), "log units", "16 TMCs; episode-day D/C"),
+        ("B", "sigma_ln(D/C), all GP corridor-periods (constant model)", float(b_models.loc["All GP corridor-periods", "intercept"]), "log units", f"{len(b_tmc)} TMCs; episode-day D/C"),
+        ("B", "Spearman observed vs QVDF PTI95 with planning sigma (LOTO)", float(b_check.loc["planning sigma, LOTO", "spearman_rho"]), "correlation", "10 TMCs"),
         ("C1", "Spearman D/C vs P", corr("D/C vs P", "spearman_rho"), "correlation", "133 episode-days"),
         ("C1", "Spearman D/C vs TTI", corr("D/C vs TTI", "spearman_rho"), "correlation", "133 episode-days"),
         ("C1", "Spearman P vs TTI", corr("P vs TTI", "spearman_rho"), "correlation", "133 episode-days"),
@@ -216,7 +235,8 @@ def main() -> None:
     day, tmc = load_sample()
     table = correlation_table(day, tmc)
     table.round(3).to_csv(KEY / "correlation_table_c1_c2.csv", index=False)
-    plot(day, tmc, table, KEY / "fig1_dc_duration_travel_time_pti.png")
+    plot_c1(day, table, KEY / "fig_c1_dc_p_tti.png")
+    plot_c3(tmc, KEY / "fig_c3_observed_vs_qvdf.png")
     numbers = key_numbers(table)
     numbers.to_csv(KEY / "key_numbers.csv", index=False)
     print(table.round(3).to_string(index=False))

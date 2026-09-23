@@ -1,4 +1,9 @@
 experiment,quantity,value,unit,sample
+B,Share of TMCs passing Shapiro-Wilk on ln(D/C),0.791,share,67 GP TMCs
+B,Share of TMCs where ln(D/C) fits the normal better than D/C,0.403,share,67 GP TMCs
+B,"sigma_ln(D/C), I-95 SB PM (constant model)",0.259,log units,16 TMCs; episode-day D/C
+B,"sigma_ln(D/C), all GP corridor-periods (constant model)",0.271,log units,67 TMCs; episode-day D/C
+B,Spearman observed vs QVDF PTI95 with planning sigma (LOTO),0.842,correlation,10 TMCs
 C1,Spearman D/C vs P,0.982,correlation,133 episode-days
 C1,Spearman D/C vs TTI,0.814,correlation,133 episode-days
 C1,Spearman P vs TTI,0.886,correlation,133 episode-days
