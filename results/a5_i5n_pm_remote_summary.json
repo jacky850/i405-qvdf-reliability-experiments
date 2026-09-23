@@ -1,0 +1,31 @@
+{
+  "sample": "I-5 North, PM, 2025-07-07 through 2025-07-25",
+  "control_volumes": [
+    "I5N-CV39-43",
+    "I5N-CV39-44",
+    "I5N-CV39-45"
+  ],
+  "minimum_daily_coverage": 0.8125,
+  "overall_coverage": 0.9847222222222223,
+  "upstream_congested_days": 1,
+  "common_support_observations": 38,
+  "threshold_1_fit": {
+    "downstream_throughput": {
+      "fd_h": 1.811024631576128,
+      "n": 1.0,
+      "r_squared": -0.10293362357441715,
+      "rmse_h": 1.0037749506080782,
+      "spearman_rho": -0.411400843703584,
+      "n_at_boundary": true
+    },
+    "remote_upstream_plus_on_minus_off": {
+      "fd_h": 1.4001155778652608,
+      "n": 1.0,
+      "r_squared": -0.07209312194350948,
+      "rmse_h": 0.9896415484939621,
+      "spearman_rho": -0.11268689120904961,
+      "n_at_boundary": true
+    }
+  },
+  "interpretation": "Remote ramp-adjusted arrivals reduce the inverse association but do not establish a positive duration-QVDF relationship."
+}

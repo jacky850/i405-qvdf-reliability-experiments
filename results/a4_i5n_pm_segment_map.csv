@@ -1,0 +1,4 @@
+segment_id,segment_index,upstream_station_id,downstream_station_id,length_km,capacity_vph_link,capacity_speed_kmh,on_ramp_station_ids,off_ramp_station_ids,mainline_path_links
+I5N-S68,68,1205320,1205375,1.207008,8112.0,71.34,1205369,,L5N-081;L5N-202;L5N-082;L5N-210;L5N-183;L5N-200;L5N-091;L5N-043
+I5N-S69,69,1205375,1205341,0.1609343999999908,7308.0,71.76,1212038,1212622,L5N-242
+I5N-S70,70,1205341,1205380,0.804672,8004.0,71.34,,1212250;1212252;1213944,L5N-044;L5N-241;L5N-240;L5N-045

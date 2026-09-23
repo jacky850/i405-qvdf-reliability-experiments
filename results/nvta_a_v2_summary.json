@@ -1,0 +1,25 @@
+{
+  "scope": {
+    "corridors": [
+      "I-95 NB",
+      "I-95 HOV NB"
+    ],
+    "period": "AM",
+    "weekday_dates": 23,
+    "tmcs": 34,
+    "source_resolution_minutes": 5,
+    "analysis_resolution_minutes": 15
+  },
+  "parameter_mode": "tmc_offpeak_p85_cube_am_capacity",
+  "method": "fixed S3 parameters within each run; recompute P and D/C at each threshold; fit f_d and n separately on common link-day support",
+  "common_support_by_corridor": {
+    "I-95 HOV NB": 3,
+    "I-95 NB": 275
+  },
+  "fitted_corridors": [
+    "I-95 NB"
+  ],
+  "unfitted_corridors": [
+    "I-95 HOV NB"
+  ]
+}

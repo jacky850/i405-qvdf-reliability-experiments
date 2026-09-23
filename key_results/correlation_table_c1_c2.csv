@@ -1,0 +1,7 @@
+level,pair,n,unit,pearson_r,pearson_95_low,pearson_95_high,spearman_rho,spearman_95_low,spearman_95_high
+C1 link-day,D/C vs P,133,episode-days,0.982,0.974,0.988,0.982,0.969,0.987
+C1 link-day,D/C vs TTI,133,episode-days,0.76,0.679,0.825,0.814,0.722,0.878
+C1 link-day,P vs TTI,133,episode-days,0.824,0.777,0.866,0.886,0.806,0.936
+C2 TMC across days,E[P] vs TTI,10,TMCs,0.922,0.872,0.992,0.867,0.409,1.0
+C2 TMC across days,P95 vs PTI95,10,TMCs,0.812,0.711,0.977,0.903,0.59,1.0
+C2 TMC across days,TTI vs PTI95,10,TMCs,0.943,0.896,0.992,0.927,0.648,1.0

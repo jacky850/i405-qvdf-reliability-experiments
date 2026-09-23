@@ -1,0 +1,13 @@
+corridor,period,network_open_tmcs,network_closed_tmcs,median_speed_over_reference,parameter_rows,link_specific_high_medium,link_specific_high_medium_on_open_links,usable_for_open_lane_reliability
+I95HOV_NB,AM,20,0,1.0027777777777778,0,0,0,False
+I95HOV_NB,MD,20,0,0.9117647058823529,19,8,8,False
+I95HOV_NB,PM,0,20,0.6956338028169015,20,12,0,False
+I95HOV_SB,AM,0,20,0.875,9,1,0,False
+I95HOV_SB,MD,20,0,0.9806849315068493,15,1,1,False
+I95HOV_SB,PM,20,0,1.0,0,0,0,False
+I395HOV_NB,AM,22,0,1.0054929577464788,3,1,1,False
+I395HOV_NB,MD,22,0,0.9577464788732394,6,0,0,False
+I395HOV_NB,PM,3,19,0.7605633802816901,21,13,1,False
+I395HOV_SB,AM,3,19,0.9122807017543859,4,1,1,False
+I395HOV_SB,MD,22,0,0.9710144927536232,12,1,1,False
+I395HOV_SB,PM,22,0,1.0230434782608697,0,0,0,False

@@ -1,0 +1,56 @@
+{
+  "corridor": "D12_I5_N",
+  "period": "15:00-19:00",
+  "date_range": [
+    "2025-07-07",
+    "2025-07-25"
+  ],
+  "weekdays": 15,
+  "segments": [
+    "I5N-S68",
+    "I5N-S69",
+    "I5N-S70"
+  ],
+  "joint_coverage_min": 1.0,
+  "common_support_link_days": 45,
+  "threshold_1_fit": {
+    "downstream_throughput": {
+      "observations": 45,
+      "fd_h": 3.793244162969673,
+      "n": 1.0,
+      "r_squared": -0.4479664688104663,
+      "rmse_h": 0.7360137460611569,
+      "spearman_rho": -0.7214114095538511,
+      "n_at_boundary": true
+    },
+    "upstream_mainline": {
+      "observations": 45,
+      "fd_h": 3.950631165454897,
+      "n": 1.0,
+      "r_squared": -0.8911656232444827,
+      "rmse_h": 0.8411461383965019,
+      "spearman_rho": -0.3637091103158312,
+      "n_at_boundary": true
+    },
+    "upstream_plus_on_minus_off": {
+      "observations": 45,
+      "fd_h": 4.191648763825637,
+      "n": 1.0,
+      "r_squared": -1.5519900425098951,
+      "rmse_h": 0.9771160809881106,
+      "spearman_rho": -0.5809444428111851,
+      "n_at_boundary": true
+    },
+    "downstream_plus_storage": {
+      "observations": 45,
+      "fd_h": 3.7992672733924455,
+      "n": 1.0,
+      "r_squared": -0.47100214486203984,
+      "rmse_h": 0.7418452598391949,
+      "spearman_rho": -0.7353392901848202,
+      "n_at_boundary": true
+    }
+  },
+  "storage_density_method": "trapezoid_between_boundary_detectors",
+  "raw_data_exported": false
+}

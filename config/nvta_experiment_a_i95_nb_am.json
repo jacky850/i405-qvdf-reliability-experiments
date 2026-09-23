@@ -1,0 +1,32 @@
+{
+  "raw_speed_csv": "/Users/jinxiwu/Library/CloudStorage/Dropbox-ASU/Jinxi Wu/1_map_matching2026/data/raw/ritis/NOVA-Oct1-31-2025--Avg-at-5min-.csv",
+  "corridor_mapping_csv": "/Users/jinxiwu/Library/CloudStorage/Dropbox-ASU/Jinxi Wu/T2_Task_3/t2_vt2_analysis (2)/qvdf_projection/data/corridor_tmc_mapping.csv",
+  "corridors": ["I-95 NB", "I-95 HOV NB"],
+  "analysis_period": "AM",
+  "analysis_start_minute": 300,
+  "analysis_end_minute": 600,
+  "analysis_interval_minutes": 15,
+  "minimum_source_observations_per_interval": 2,
+  "speed_threshold_multipliers": [0.90, 0.95, 1.00, 1.05, 1.10],
+  "smoothing_bins": 3,
+  "hysteresis_minutes": 30,
+  "minimum_episode_hours": 0.5,
+  "minimum_fit_observations": 10,
+  "fit_n_min": 0.05,
+  "fit_n_max": 10.0,
+  "fit_n_step": 0.001,
+  "facility_fd_priors": {
+    "GP": {
+      "free_flow_speed_mph": 70.0,
+      "capacity_vphpl": 2200.0,
+      "s3_m": 4.0,
+      "source": "existing NVTA speed-only INRIX prior"
+    },
+    "HOV": {
+      "free_flow_speed_mph": 65.0,
+      "capacity_vphpl": 1800.0,
+      "s3_m": 4.0,
+      "source": "existing NVTA speed-only INRIX prior"
+    }
+  }
+}

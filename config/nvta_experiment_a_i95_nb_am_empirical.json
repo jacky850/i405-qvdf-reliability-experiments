@@ -1,0 +1,30 @@
+{
+  "raw_speed_csv": "/Users/jinxiwu/Library/CloudStorage/Dropbox-ASU/Jinxi Wu/1_map_matching2026/data/raw/ritis/NOVA-Oct1-31-2025--Avg-at-5min-.csv",
+  "corridor_mapping_csv": "/Users/jinxiwu/Library/CloudStorage/Dropbox-ASU/Jinxi Wu/T2_Task_3/t2_vt2_analysis (2)/qvdf_projection/data/corridor_tmc_mapping.csv",
+  "corridors": ["I-95 NB", "I-95 HOV NB"],
+  "excluded_tmcs": [],
+  "analysis_period": "AM",
+  "analysis_start_minute": 300,
+  "analysis_end_minute": 600,
+  "analysis_interval_minutes": 15,
+  "minimum_source_observations_per_interval": 2,
+  "speed_threshold_multipliers": [0.90, 0.95, 1.00, 1.05, 1.10],
+  "smoothing_bins": 3,
+  "hysteresis_minutes": 30,
+  "minimum_episode_hours": 0.5,
+  "minimum_fit_observations": 10,
+  "fit_n_min": 0.05,
+  "fit_n_max": 10.0,
+  "fit_n_step": 0.001,
+  "parameter_mode": "tmc_offpeak_p85_cube_am_capacity",
+  "per_tmc_parameter_sources": {
+    "free_flow_audit_csv": "results/nvta_i95_free_flow_audit.csv",
+    "capacity_audit_csv": "results/nvta_i95_capacity_audit.csv"
+  },
+  "facility_fd_priors": {
+    "GP": {"s3_m": 4.0},
+    "HOV": {"s3_m": 4.0}
+  },
+  "output_prefix": "nvta_a_v2",
+  "figure_title": "I-95 Northbound AM QVDF sensitivity: audited TMC parameters"
+}

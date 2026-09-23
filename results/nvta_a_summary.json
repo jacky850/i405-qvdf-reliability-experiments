@@ -1,0 +1,24 @@
+{
+  "scope": {
+    "corridors": [
+      "I-95 NB",
+      "I-95 HOV NB"
+    ],
+    "period": "AM",
+    "weekday_dates": 23,
+    "tmcs": 34,
+    "source_resolution_minutes": 5,
+    "analysis_resolution_minutes": 15
+  },
+  "method": "fixed facility-specific inverse-S3 priors; recompute P and D/C at each threshold; fit f_d and n separately on common link-day support",
+  "common_support_by_corridor": {
+    "I-95 HOV NB": 2,
+    "I-95 NB": 276
+  },
+  "fitted_corridors": [
+    "I-95 NB"
+  ],
+  "unfitted_corridors": [
+    "I-95 HOV NB"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "corridor_id": "D12_I5_N",
+  "period_label": "PM",
+  "period_start": "15:00",
+  "period_end": "19:00",
+  "sample_start_date": "2025-07-07",
+  "sample_end_date": "2025-07-25",
+  "expected_weekdays": 15,
+  "segment_indices": [68, 69, 70],
+  "minimum_pct_observed": 75,
+  "demand_window_bins": 12,
+  "speed_threshold_multipliers": [0.90, 0.95, 1.00, 1.05, 1.10],
+  "smoothing_bins": 3,
+  "minimum_episode_bins": 3,
+  "fit_n_min": 1.0,
+  "fit_n_max": 4.0,
+  "fit_n_step": 0.001,
+  "storage_density_method": "trapezoid_between_boundary_detectors",
+  "bin_hours": 0.08333333333333333
+}

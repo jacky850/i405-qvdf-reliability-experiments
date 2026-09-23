@@ -1,0 +1,4 @@
+control_volume_id,upstream_segment_index,bottleneck_segment_index,upstream_station_id,downstream_station_id,segment_count,length_km,capacity_vph_link,capacity_speed_kmh,upstream_capacity_speed_kmh,on_ramp_station_ids,off_ramp_station_ids
+I5N-CV39-43,39,43,1204697,1204787,5,4.079687040000017,7200.0,69.24,70.8,1204722;1204743;1204772,1204727
+I5N-CV39-44,39,44,1204697,1204825,6,4.683191039999994,9444.0,71.46,70.8,1204722;1204743;1204772,1204727
+I5N-CV39-45,39,45,1204697,1220011,7,4.988966399999991,8328.0,71.58,70.8,1204722;1204743;1204772,1204727

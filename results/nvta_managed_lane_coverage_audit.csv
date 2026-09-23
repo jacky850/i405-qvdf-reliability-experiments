@@ -1,0 +1,5 @@
+corridor,facility,direction,selected_tmc_count,oct_2025_weekday_count,am_pm_day_period_rows,median_obs_per_tmc_day_period,min_obs_per_tmc_day_period,max_obs_per_tmc_day_period,am_open_tmc_rows,am_closed_tmc_rows,pm_open_tmc_rows,pm_closed_tmc_rows,recommended_period,notes
+I-395 HOV NB,HOV,NORTHBOUND,9,23,414,42,36,48,9,0,4,5,AM,All selected rows are open in AM; PM network is reversible or partially closed
+I-395 HOV SB,HOV,SOUTHBOUND,3,23,138,42,36,48,2,1,3,0,PM,All selected rows are open in PM
+I-95 HOV NB,HOV,NORTHBOUND,14,23,644,42,31,48,14,0,0,14,AM,Strongest managed-lane sample and all selected rows are open in AM
+I-95 HOV SB,HOV,SOUTHBOUND,1,23,46,42,36,48,0,1,1,0,PM,Open in PM but only one selected TMC

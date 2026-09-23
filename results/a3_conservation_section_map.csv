@@ -1,0 +1,4 @@
+link_id,upstream_station_id,on_ramp_station_id,off_ramp_station_id,downstream_station_id,interchange
+L405S-132,1222286,1201711,1201715,1222749,Magnolia 1
+L405S-115,1222804,1201757,1201763,1222327,Edinger
+L405S-114,1222327,1201793,1201797,1201805,Beach 1

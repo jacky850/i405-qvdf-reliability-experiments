@@ -1,0 +1,22 @@
+result_group,metric,value,unit,sample,interpretation
+variability_decomposition,pooled_log_delay_association_r_squared,0.7235826010351127,share,133 episode-days across 10 TMCs,pooled association; includes between-link differences
+variability_decomposition,within_tmc_day_to_day_association_r_squared,0.3350414517863268,share,133 episode-days across 10 TMCs,primary explained-variability statistic for day-to-day reliability
+variability_decomposition,between_tmc_mean_association_r_squared,0.8953434022781775,share,10 TMC means,association between link-average D/C signal and link-average delay
+variability_decomposition,fixed_qvdf_within_tmc_r_squared,0.31780880885969853,share,133 episode-days across 10 TMCs,uses QVDF magnitude without refitting; can be negative
+variance_components,median_demand_explained_share,0.291451896711565,share,10 TMCs,median beta-squared log-D/C variance share
+variance_components,median_unexplained_share,0.7085481032884349,share,10 TMCs,median residual log-delay variance share
+raw_qvdf,pti95_pearson_r,0.8606276985189707,correlation,10 TMCs,observed versus modeled PTI95; Pearson bootstrap 95% interval 0.664 to 0.962
+raw_qvdf,pti95_spearman_rho,0.7818181818181817,correlation,10 TMCs,observed versus modeled PTI95 ranks
+raw_qvdf,pti95_mae,1.233011487931546,PTI points,10 TMCs,bootstrap 95% interval 0.787 to 1.716
+raw_qvdf,pti95_rmse,1.4479118736769847,PTI points,10 TMCs,root mean squared error
+raw_qvdf,pti95_bias,-1.233011487931546,PTI points,10 TMCs,model minus observed
+residual_variance_only_loto,pti95_pearson_r,0.9515640113362422,correlation,10 TMCs,observed versus modeled PTI95; Pearson bootstrap 95% interval 0.866 to 0.990
+residual_variance_only_loto,pti95_spearman_rho,0.8424242424242423,correlation,10 TMCs,observed versus modeled PTI95 ranks
+residual_variance_only_loto,pti95_mae,0.81627865220776,PTI points,10 TMCs,bootstrap 95% interval 0.509 to 1.138
+residual_variance_only_loto,pti95_rmse,0.9543123464004304,PTI points,10 TMCs,root mean squared error
+residual_variance_only_loto,pti95_bias,-0.81627865220776,PTI points,10 TMCs,model minus observed
+residual_bias_and_variance_loto,pti95_pearson_r,0.9460781127277553,correlation,10 TMCs,observed versus modeled PTI95; Pearson bootstrap 95% interval 0.848 to 0.991
+residual_bias_and_variance_loto,pti95_spearman_rho,0.8424242424242423,correlation,10 TMCs,observed versus modeled PTI95 ranks
+residual_bias_and_variance_loto,pti95_mae,0.8950602870280516,PTI points,10 TMCs,bootstrap 95% interval 0.640 to 1.184
+residual_bias_and_variance_loto,pti95_rmse,0.9932163530460716,PTI points,10 TMCs,root mean squared error
+residual_bias_and_variance_loto,pti95_bias,0.8174712418029199,PTI points,10 TMCs,model minus observed

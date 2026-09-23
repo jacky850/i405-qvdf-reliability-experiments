@@ -1,0 +1,4 @@
+control_volume_id,valid_cells,correlation,bias_vph,mae_vph,rmse_vph,note
+I5N-CV39-43,708,0.5318856064586268,3100.8474576271187,3102.169491525424,3184.4336217803984,raw balance before storage term; not expected to equal zero
+I5N-CV39-44,709,0.3462920488342706,1354.1382228490831,1455.9943582510577,1624.6111462706212,raw balance before storage term; not expected to equal zero
+I5N-CV39-45,710,0.2858061213738895,2155.8760563380283,2204.450704225352,2342.602236709557,raw balance before storage term; not expected to equal zero

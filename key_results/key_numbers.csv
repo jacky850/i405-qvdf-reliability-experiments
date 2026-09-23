@@ -1,0 +1,19 @@
+experiment,quantity,value,unit,sample
+C1,Spearman D/C vs P,0.982,correlation,133 episode-days
+C1,Spearman D/C vs TTI,0.814,correlation,133 episode-days
+C1,Spearman P vs TTI,0.886,correlation,133 episode-days
+C2,Spearman P95 vs PTI95,0.903,correlation,10 TMCs
+C2,Spearman TTI vs PTI95,0.927,correlation,10 TMCs
+C3,Spearman observed vs QVDF PTI95,0.782,correlation,10 TMCs
+C3,QVDF PTI95 bias (model - observed),-1.233,PTI points,10 TMCs
+C4,Median share of log-delay variance from D/C,0.291,share,10 TMCs
+C4,Median residual (non-D/C) share,0.709,share,10 TMCs
+C4,PTI95 MAE after residual term (LOTO),0.816,PTI points,10 TMCs
+C5,Local k in PTI95 = 1 + k ln(TTI),2.685,coefficient,10 TMCs; SHRP2 k = 3.67
+C5,SHRP2 PTI95 MAE,0.940,PTI points,10 TMCs
+C5,Local-k PTI95 MAE (LOTO),0.276,PTI points,10 TMCs
+C6,"GP local k, all weekdays, 4 open corridor-periods",2.969,coefficient,81 GP TMCs
+C6,I-95 SB PM GP TTI / PTI95,2.12 / 2.55,index,23 weekdays
+C6,I-95 SB PM express-lane TTI / PTI95,1.01 / 1.01,index,23 weekdays
+C6,"I-95 SB PM planning-time saving, ML vs GP",36.199,min/trip,23.6-mile section
+C6,"Median express-lane gamma95, open direction",1.017,ratio,84 ML TMCs

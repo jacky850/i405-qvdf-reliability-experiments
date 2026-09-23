@@ -1,531 +1,141 @@
-# I-405 South QVDF Threshold Sensitivity and Reliability Experiments
+# QVDF Reliability Experiments: PeMS I-405 and NVTA I-95
 
-This small, reproducible experiment tests how the congestion speed threshold
-changes the fitted duration relationship
+This repository answers the September 22, 2026 memo on QVDF reliability for
+the NVTA B1 measure. It makes one claim:
 
-$$
-P = f_d x^n,
-$$
+> Congestion duration $P$ (h), mean travel time $E[T]$ and planning time
+> $T_{95}$ (min per trip) are different measures in different units. On I-95
+> they move together, consistently with one stochastic loading ratio
+> $X=D/C$, but day-to-day $D/C$ explains only about 29% of travel-time
+> variability. The rest belongs in a nonrecurring term $\tau_g$.
 
-where `P` is the longest AM congestion episode in hours. Five thresholds are
-tested: `0.90`, `0.95`, `1.00`, `1.05`, and `1.10` times the S3 speed at
-capacity.
+The prototype is PeMS I-405 South (Experiments A and B). The evidence for
+NVTA uses RITIS/INRIX travel times and the calibrated NVTA QVDF package for
+I-95 and I-395 (October 2025, 23 weekdays).
 
-## Scope
+## Answers to the memo
 
-- Dataset: Caltrans PeMS
-- Corridor: I-405 South
-- Adjacent links: `L405S-132`, `L405S-115`, and `L405S-114`
-- Dates: 15 consecutive non-holiday weekdays, September 5-25, 2025
-- AM analysis period for flow parameters: 06:00-10:00 Pacific local time
-- Episode-search window: 05:30-10:30, including a 30-minute boundary buffer
-- Resolution: 5 minutes
-- Common sample: 45 link-days at every threshold
+| # | Question | Answer | Evidence |
+|---|---|---|---|
+| 1 | Does the speed threshold change $P$, $D/C$, $f_d$, $n$? | Near $v_c$, barely. Across $0.90$–$1.10\,v_c$, $f_d$ moves ≤ 5.4% and $n$ ≤ 4.5% on I-95 NB GP ($R^2$ 0.95–0.97, 275 TMC-days). The NVTA policy cutoff matters a lot: moving from $0.50v_f$ to $0.25v_f$ removes **88.7%** of congested link-mile-hours (203 → 43 TMC-days). | A1: [doc 05](docs/05_nvta_experiment_a_i95_nb_am_empirical_parameters.md); A2: [doc 06](docs/06_nvta_b1_speed_cutoff_test.md) |
+| 2 | Can stochastic $D/C$ give TTI, PTI95 and reliability? | Yes in rank: QVDF-implied vs observed PTI95 Spearman **0.78** (10 TMCs). Not in level: the model underpredicts PTI95 by **1.23** points on average. | C3 |
+| 3 | How much variability does $D/C$ explain? | Median **29.1%** of day-to-day log-delay variance; **70.9%** is residual. Adding a leave-one-TMC-out residual term $\tau$ cuts PTI95 MAE from 1.23 to **0.82**. | C4 |
+| 4 | Does the PTI–TTI relationship transfer? | Strong within I-95 (TTI–PTI95 Spearman 0.93), but SHRP2's $k=3.67$ is outside the local interval: $k=$ **2.69** (2.49–2.92) on the C3 sample and **2.97** (2.83–3.10) on 81 GP TMCs over four corridor-periods. It does not transfer across lane types: open managed lanes sit at $\gamma_{95}\approx1.02$. | C5, C6 |
+| 5 | How should managed lanes get credit? | By their own observed travel-time distribution in the open direction. On I-95 SB PM the express lanes save **36.2 min/trip** of planning time (23.6 mi; TTI 1.01 vs 2.12). There are **no usable QVDF parameters** for an open managed lane. | C6: [doc 08](docs/08_managed_lane_comparison.md) |
 
-## Definitions and units
+Every number above is in [`key_results/key_numbers.csv`](key_results/key_numbers.csv).
 
-For link $l$, day $d$, and threshold multiplier $a$, let
-$\mathcal{E}_{l,d,a}$ denote the detected congestion episode and let
-$\Delta t=5/60$ hour. The variables are defined as
+## Core evidence
 
-$$
-D_{l,d,a} =
-\sum_{t\in\mathcal{E}_{l,d,a}}q_{l,d,t}\,\Delta t,
-\qquad
-[D]=\mathrm{veh/link},
-$$
+### Figure 1: D/C, duration, travel time and planning time move together
 
-$$
-C_l =
-Q_{0.95}\left(
-\left\lbrace q_{l,d,t}:06{:}00\le t<10{:}00\right\rbrace
-\right),
-\qquad
-[C]=\mathrm{veh/(h\cdot link)},
-$$
+![Core scatterplots](key_results/fig1_dc_duration_travel_time_pti.png)
 
-$$
-\left[\frac{D}{C}\right]=\mathrm{h},
-\qquad
-N_{l,d,a}=\left|\mathcal{E}_{l,d,a}\right|,
-\qquad
-P_{l,d,a}=N_{l,d,a}\Delta t,
-\qquad
-[P]=\mathrm{h},
-$$
+**Table 1. C1/C2 correlations**, I-95 SB GP PM. C1 uses 133 accepted
+episode-days and C2 uses 10 TMCs across their weekdays. Intervals are
+2,000-replicate bootstrap 95% intervals.
 
-$$
-P=f_d\left(\frac{D}{C}\right)^n.
-$$
+| Level | Pair | Pearson | Spearman (95% CI) |
+|---|---|---:|---:|
+| C1 link-day | D/C vs P ¹ | 0.98 | 0.98 (0.97–0.99) |
+| C1 link-day | D/C vs TTI | 0.76 | 0.81 (0.72–0.88) |
+| C1 link-day | P vs TTI | 0.82 | 0.89 (0.81–0.94) |
+| C2 TMC | E[P] vs TTI | 0.92 | 0.87 (0.41–1.00) |
+| C2 TMC | P95 vs PTI95 | 0.81 | 0.90 (0.59–1.00) |
+| C2 TMC | TTI vs PTI95 | 0.94 | 0.93 (0.65–1.00) |
 
-Both $q$ and $C$ are whole-link quantities over all lanes. A single fixed
-$C_l$ is used for every day and every threshold tested on link $l$.
-Here, uppercase $N_{l,d,a}$ is the number of 5-minute bins in the detected
-episode. It is distinct from lowercase $n$, the fitted exponent in the QVDF.
+¹ The NVTA $D/C$ is episode demand over PM-period capacity, reconstructed from
+the same RITIS speeds. It shares the episode with $P$, so 0.98 is an
+internal-consistency check (memo Section 5), not independent validation. The
+memo's matched peak-hour $D^{60}/C$ needs model or detector volumes that the
+RITIS data do not provide.
 
-## Method, one step at a time
+### Figure 2: most day-to-day variability is not D/C (C4)
 
-### Step 1 - Estimate fixed link parameters
+![Variability decomposition](nvta/c4-variability-decomposition/figures/nvta_c4_variability_decomposition.png)
 
-Run:
+The $D/C$ share ranges from about 0% to 80% across the 10 TMCs. This is the
+$\beta^2\sigma^2_{\ln(D/C)}$ versus $\tau^2_g$ split of memo Section 3.
 
-```bash
-python scripts/step1_estimate_link_parameters.py
-```
+### Figure 3: local PTI–TTI curve vs SHRP2 (C5)
 
-For each link:
+![PTI-TTI vs SHRP2](nvta/c5-pti-tti-comparison/figures/nvta_c5_pti_tti_shrp2_comparison.png)
 
-- free-flow speed `vf_mph` = 95th percentile of observed AM speed;
-- whole-link capacity `capacity_vph_link` = 95th percentile of observed AM
-  whole-link flow;
-- S3 capacity speed `vc_mph = vf_mph / sqrt(2)`.
+SHRP2 overpredicts PTI95 on all 10 TMCs (MAE 0.94). A leave-one-TMC-out
+local $k$ has MAE 0.28.
 
-Output: `results/step1_link_parameters.csv`
+### Figure 4: GP vs managed lane in the open direction (C6)
 
-### Step 2 - Prepare link-day flow statistics
+![GP vs managed lane](nvta/c6-managed-lane-comparison/figures/nvta_c6_gp_vs_managed_lane.png)
 
-Run:
+The express lanes are reversible: northbound in AM, southbound in PM. The
+existing managed-lane QVDF fits (12 TMCs on I-95 HOV NB PM, 13 on I-395 HOV
+NB PM) come from **closed-direction** records, where the speed ratio is about
+0.70 while the lane is closed. They are excluded. See
+[doc 08](docs/08_managed_lane_comparison.md) for the audit and all four
+corridor-periods.
 
-```bash
-python scripts/step2_compute_daily_demand.py
-```
+## Scope and caveats
 
-This script prepares the link-day intermediate table used by the automated
-experiment pipeline.
+- C3–C5 are **conditional on accepted PM congestion episodes** on 10 TMCs of
+  one corridor, direction and period. They are descriptive, not national
+  transferability evidence.
+- Link 95th percentiles do not add to a route 95th percentile. Summed link
+  planning time is a *planning-time exposure proxy*. C6 section values are
+  sums of simultaneous TMC travel times, not trajectory times.
+- The C6 managed-lane savings are the reliability a traveler already in the
+  lane enjoys. The memo's build-versus-no-build express-lane test, and any
+  toll or lane-choice valuation, are not done.
+- PeMS Experiment B part 3 ($\alpha=0.278$, $\beta=1.772$,
+  $\sigma_{\ln(D/C)}=0.0376$, $R^2=0.129$) is a provisional sanity check for
+  one California corridor. Do not use it for NVTA scoring.
+- In Experiment A the regressor is the capacity-equivalent congested-flow
+  duration $X_E$ (hours), so $f_d$ has units $\mathrm{h}^{1-n}$.
+- A flow-conservation demand did not give an independent loading measure
+  ([doc 07](docs/07_conservation_demand_attempt.md)).
 
-Output: `results/step2_daily_demand.csv`
-
-### Step 3 - Detect congestion under five thresholds
-
-Run:
-
-```bash
-python scripts/step3_detect_threshold_episodes.py
-```
-
-Speed is smoothed by a centered 3-bin median. A candidate episode must contain
-at least three consecutive 5-minute bins at or below the selected threshold.
-The longest episode is retained; ties use the lower minimum speed and then the
-earlier start. For each retained episode, the script computes $P$, $D$,
-$C$, and $D/C$ using the definitions above.
-
-Outputs:
-
-- `results/step3_threshold_episodes.csv`
-- `results/step3_common_support.csv`
-
-### Step 4 - Fit QVDF and compare parameters
-
-Run:
-
-```bash
-python scripts/step4_fit_qvdf.py
-```
-
-For each threshold, the pooled fit uses all 45 common link-days and estimates
-both `f_d` and `n` by least squares, with `1 <= n <= 4`. Per-link fits are
-reported separately. The script also produces 500 fixed-seed bootstrap
-replicates for pooled-fit confidence intervals.
-
-Outputs:
-
-- `results/step4_qvdf_fit_summary.csv`
-- `results/step4_qvdf_predictions.csv`
-- `results/experiment_a_summary.json`
-
-### Step 5 - Create figures
-
-Run:
-
-```bash
-python scripts/step5_make_figures.py
-```
-
-Outputs:
-
-- `figures/threshold_parameter_sensitivity.png`
-- `figures/duration_vs_dc.png`
-
-To reproduce everything after installing `requirements.txt`:
-
-```bash
-python scripts/run_all.py
-```
-
-## Primary results
-
-| threshold / capacity speed | median P (h) | f_d | n | R-squared | RMSE (h) |
-|---:|---:|---:|---:|---:|---:|
-| 0.90 | 2.833 | 1.286 | 1.248 | 0.949 | 0.199 |
-| 0.95 | 3.000 | 1.238 | 1.281 | 0.932 | 0.211 |
-| 1.00 | 3.000 | 1.193 | 1.313 | 0.928 | 0.214 |
-| 1.05 | 3.083 | 1.164 | 1.316 | 0.909 | 0.236 |
-| 1.10 | 3.250 | 1.238 | 1.209 | 0.874 | 0.274 |
-
-The four-panel summary shows how the median congestion duration, median
-$D/C$, $f_d$, and $n$ change as the speed threshold moves around the speed at
-capacity.
-
-![Experiment A threshold sensitivity](figures/threshold_parameter_sensitivity.png)
-
-Relative to the `1.00 x vc` case, `f_d` changes by at most 7.9% and `n` by at
-most 7.9%. The relationship is therefore reasonably stable from `0.90` through
-`1.05 x vc`. At `1.10 x vc`, `n` drops by 7.9%, R-squared falls to 0.874, and
-RMSE rises to 0.274 hours, showing that the highest threshold begins to weaken
-the fit.
-
-## Folder structure
+## Repository map
 
 ```text
-sensitive test/
-├── config/experiment_a.json
-├── data/
-│   ├── i405s_pems_am_15_weekdays_raw.csv.gz
-│   └── i405s_pems_am_15_weekdays_link_5min.csv
-├── experiment_a/core.py
-├── scripts/
-│   ├── step1_estimate_link_parameters.py
-│   ├── step2_compute_daily_demand.py
-│   ├── step3_detect_threshold_episodes.py
-│   ├── step4_fit_qvdf.py
-│   ├── step5_make_figures.py
-│   └── run_all.py
-├── tests/test_core.py
-├── results/
-├── figures/
-├── requirements.txt
-└── README.md
+README.md                       this summary
+key_results/                    the only tables and figure most readers need
+  key_numbers.csv               every number quoted above, with its sample
+  correlation_table_c1_c2.csv   Table 1 with bootstrap intervals
+  fig1_dc_duration_travel_time_pti.png
+nvta/                           NVTA RITIS evidence (I-95 / I-395, Oct 2025)
+  paths.py                      locations of licensed inputs (NVTA_EXTERNAL_ROOT)
+  core_evidence.py              builds key_results/ from C3-C6 outputs
+  c3-qvdf-reliability/          observed vs QVDF-implied TTI, PTI95, gamma95
+  c4-variability-decomposition/ D/C share vs residual share; residual term
+  c5-pti-tti-comparison/        local k vs SHRP2 k = 3.67
+  c6-managed-lane-comparison/   GP vs express lanes, open direction only
+docs/                           method notes
+  00_pems_i405_experiments_a_b.md   full PeMS Experiment A/B method
+  01-06                         metric lock, data inventory, NVTA A1/A2, audits
+  07_conservation_demand_attempt.md
+  08_managed_lane_comparison.md
+config/ data/ experiment_a/ experiment_b/ scripts/ tests/
+results/ figures/               PeMS pipeline, NVTA A1/A2 runs and their outputs
 ```
 
-## Input data dictionary
-
-### `data/i405s_pems_am_15_weekdays_raw.csv.gz`
-
-Station-level PeMS observations retained from the full source. It contains
-5,400 rows. All retained rows have `is_observed = 1` and `is_missing = 0`.
-
-### `data/i405s_pems_am_15_weekdays_link_5min.csv`
-
-The 2,700-row experiment input. Multiple stations assigned to the same link
-and timestamp are averaged, not summed.
-
-| Column | Unit | Definition |
-|---|---:|---|
-| `corridor` | - | Corridor label, `I405_S`. |
-| `road_order` | - | Link order by increasing median milepost. |
-| `link_id` | - | PeMS-derived link identifier. |
-| `timestamp_local` | ISO 8601 | Pacific local timestamp with UTC offset. |
-| `date_local` | date | Pacific local calendar date. |
-| `time_local` | HH:MM | Pacific local clock time. |
-| `minute_of_day` | minutes | Minutes since local midnight. |
-| `is_am_analysis_bin` | boolean | True for 06:00-10:00. |
-| `direction` | - | Travel direction, `S`. |
-| `milepost` | miles | Median source milepost for the link's stations. |
-| `station_count` | stations | Source stations represented in the row. |
-| `speed_mph` | mph | Mean observed speed across represented stations. |
-| `flow_vph` | veh/h/link | Mean observed station-total whole-link flow, not per lane. |
-| `occupancy_fraction` | fraction | Mean detector occupancy. |
-| `density_veh_per_mi` | veh/mile/link | Mean source density converted to miles. |
-
-The source file appends `Z` to PeMS local wall-clock timestamps without
-converting the clock to UTC. `timestamp_local` therefore interprets the source
-clock in `America/Los_Angeles`; the September sample has UTC offset `-07:00`.
-
----
-
-# Experiment B - Day-to-day D/C reliability calibration
-
-Experiment B treats daily demand-to-capacity as stochastic and prepares the
-empirical distribution of
-
-$$
-X_{s,d}=\frac{D_{s,d}}{C_s},
-\qquad
-Y_{s,d}=\ln X_{s,d},
-$$
-
-for PeMS mainline detector (s) and weekday (d). This first step prepares the
-quality-controlled detector-day sample. The next step estimates
-$\sigma_{\ln(D/C)}$ as a function of mean (D/C) and uses it in the QVDF
-reliability envelope.
-
-## Experiment B scope
-
-- Dataset: Caltrans PeMS
-- Corridor: I-405 South
-- Period: AM, 06:00-10:00 Pacific local time
-- Resolution: 5 minutes
-- Dates: 100 non-holiday weekdays, June 2-October 23, 2025
-- Excluded dates: June 19, July 4, September 1, and October 13, 2025
-- Quality rule: all 48 AM bins in a detector-day must have PeMS
-  `pct_observed = 100`
-- Availability rule: a detector must have at least 80 complete days
-- Retained sample: 12 mainline detectors on 9 mapped network links and 1,184
-  detector-days. Each retained detector has 98-99 complete days. October 7,
-  2025 has no retained strict detector-day, so the output spans 99 of the 100
-  selected calendar dates.
-
-The strict quality rule matters because the processed detector file marks
-filled cells as observed. Experiment B uses the separately reconstructed raw
-PeMS `% observed` field so filled or partially observed cells cannot
-artificially reduce the estimated day-to-day variance.
-
-## Experiment B definitions
-
-Let $q_{s,d,t}$ be the whole-detector flow rate at 5-minute bin $t$, and let
-$\mathcal W_{d}$ be the set of all consecutive 12-bin windows in the AM
-period. Daily demand is
-
-$$
-D_{s,d} =
-\max_{w\in\mathcal W_d}
-\left(\frac{1}{12}\sum_{t\in w}q_{s,d,t}\right),
-\qquad
-[D]=\mathrm{veh/(h\cdot detector)}.
-$$
-
-Capacity is fixed for every day but estimated from PeMS. First calculate the
-corridor-wide 95th-percentile per-lane flow from every fully observed I-405
-South mainline AM cell in the selected 100 weekdays:
-
-$$
-c_{95} =
-Q_{0.95}\left(\left\lbrace \frac{q_{s,d,t}}{L_s}:\text{PeMS percent observed}=100\right\rbrace\right),
-\qquad
-C_s=c_{95}L_s,
-\qquad
-[C]=\mathrm{veh/(h\cdot detector)},
-$$
-
-where $L_s$ is the PeMS metadata lane count. In this sample,
-$c_{95}=1{,}872$ veh/h/lane. A common empirical per-lane value is used rather
-than a separate P95 for each station. A station-specific P95 would mechanically
-normalize every station's $D/C$ close to one and remove the loading range
-needed to estimate whether variability changes with mean $D/C$. Cube link
-lane counts are not used because several detector-to-network matches cross
-network segmentation boundaries. Both $D$ and $C$ are whole-detector,
-all-lane rates.
-
-The capacity pool contains 87,238 fully observed 5-minute cells from 33 PeMS
-mainline detectors. It is saved separately so the 1,872 veh/h/lane percentile
-can be checked without mixing the capacity-estimation sample with the 12
-detectors that satisfy the stricter repeated-day availability rule.
-
-## Step B1 - Prepare detector-day D/C
-
-Run:
+## Reproduce
 
 ```bash
-python scripts/b1_prepare_detector_days.py
-```
-
-Outputs:
-
-- `data/i405s_pems_am_100_weekdays_detector_5min.csv.gz`: retained strict
-  5-minute observations
-- `data/i405s_pems_am_100_weekdays_capacity_pool.csv.gz`: fully observed cells
-  used to estimate the common PeMS P95 per-lane capacity
-- `results/b1_sample_dates.csv`: the frozen 100-date sample
-- `results/b1_detector_day_dc.csv`: one row per detector-day with $D$, $C$,
-  $D/C$, $\ln(D/C)$, and peak-hour speed/TTI diagnostics
-- `results/b1_detector_inventory.csv`: detector metadata and preliminary
-  across-day log statistics
-- `results/b1_data_quality_summary.json`: machine-readable sample audit
-
-The retained detectors have mean (D/C) from approximately 0.56 to 1.01. Any
-later reliability envelope outside this range must be labeled as extrapolation
-rather than presented as observed I-405 South AM evidence.
-
-## Step B2 - Calibrate day-to-day log variability
-
-Run:
-
-```bash
-python scripts/b2_calibrate_sigma.py
-```
-
-For each detector, Step B2 estimates the across-weekday parameters
-
-$$
-\mu_s=\mathrm{mean}_d\left[\ln(D_{s,d}/C_s)\right],
-\qquad
-\sigma_s=\mathrm{sd}_d\left[\ln(D_{s,d}/C_s)\right].
-$$
-
-The detector-level normal Q-Q plots below assess the lognormal assumption
-directly. Across the 12 detectors, the median Q-Q $R^2$ is 0.964 and the
-minimum is 0.912. The generally linear patterns support using a lognormal
-approximation while retaining visible detector-level tail departures.
-
-![Experiment B detector-level lognormal Q-Q plots](figures/experiment_b_lognormal_qq.png)
-
-It then compares the two simplest candidate models:
-
-$$
-\sigma(x)=a,
-\qquad
-\sigma(x)=a+bx,
-\qquad x=\mathrm{mean}_d(D/C).
-$$
-
-The comparison uses AICc and leave-one-detector-out RMSE. When the constant
-model is within 2 AICc units of the minimum, the constant is selected by
-parsimony.
-
-Outputs:
-
-- `results/b2_detector_log_stats.csv`: one row per detector with
-  $\mu_{\ln(D/C)}$, $\sigma_{\ln(D/C)}$, skewness, kurtosis, and normal Q-Q
-  correlation
-- `results/b2_dc_bins.csv`: 0.1-wide mean-(D/C) bin summary
-- `results/b2_sigma_model_comparison.csv`: constant-versus-linear diagnostics
-- `results/b2_sigma_curve.csv`: selected model from 0.4 to 1.3 with an
-  empirical-support flag
-- `results/b2_summary.json`: selected model and main diagnostics
-- `figures/experiment_b_lognormal_qq.png`: detector-level normal Q-Q plots for
-  $\ln(D/C)$
-- `figures/experiment_b_sigma_calibration.png`: clean calibration figure
-
-The selected model for the current sample is the constant specification,
-
-$$
-\sigma_{\ln(D/C)}=0.0376.
-$$
-
-The linear alternative improves AICc by only 1.71 units, below the configured
-two-unit threshold. The constant is therefore retained as the simpler model.
-This does not establish that loading can never affect variability; it states
-that the current 12-detector sample does not support the extra slope strongly
-enough.
-
-The detector-level estimates, selected constant model, and linear alternative
-are shown below. Shaded regions fall outside the observed detector-mean $D/C$
-range.
-
-![Experiment B day-to-day D/C variability calibration](figures/experiment_b_sigma_calibration.png)
-
-## Step B3 - Fit delay and create the reliability envelope
-
-Run:
-
-```bash
-python scripts/b3_reliability_envelope.py
-```
-
-The daily PeMS peak-hour observations calibrate the travel-time branch
-
-$$
-\mathrm{TTI}=1+\alpha(D/C)^\beta
-$$
-
-by nonlinear least squares in observed TTI space. This calibration is separate
-from Experiment A's duration parameters $f_d$ and $n$. It supplies the
-travel-time parameters that were not present in the existing duration-only
-code.
-
-For the current 1,184 detector-days, the fitted values are
-
-$$
-\alpha=0.278,
-\qquad
-\beta=1.772.
-$$
-
-The pooled fit has $R^2=0.129$, TTI RMSE = 0.166, and TTI MAE = 0.126.
-This is a weak delay fit. It is sufficient to exercise the reliability
-calculation end to end, but the resulting envelope is provisional rather than
-a validated forecasting relationship. More days can stabilize each detector's
-distribution; broader detectors, periods, and facility types are also needed
-to test whether one pooled delay curve is defensible.
-
-For an arithmetic mean loading $x=E[D/C]$, the lognormal location parameter
-is
-
-$$
-\mu_{\ln(D/C)}=\ln x-\frac{1}{2}\sigma_{\ln(D/C)}^2.
-$$
-
-The percentile travel-time index is then
-
-$$
-\mathrm{TTI}_p =
-1+\alpha\exp\left(
-\beta\mu_{\ln(D/C)}+z_p\beta\sigma_{\ln(D/C)}
-\right),
-$$
-
-and the expected TTI is
-
-$$
-E[\mathrm{TTI}] =
-1+\alpha\exp\left(
-\beta\mu_{\ln(D/C)}+
-\frac{1}{2}\beta^2\sigma_{\ln(D/C)}^2
-\right).
-$$
-
-The output includes $\mathrm{TTI}_{50}$, $\mathrm{TTI}_{80}$,
-$\mathrm{TTI}_{90}$, $\mathrm{TTI}_{95}$, the derived multiplier
-$\gamma_p=\mathrm{TTI}_p/E[\mathrm{TTI}]$, and the SHRP2 L03 benchmark
-
-$$
-\mathrm{TTI}_{95}^{\mathrm{SHRP2}}
-=1+3.67\ln(E[\mathrm{TTI}]).
-$$
-
-When delay dominates free-flow time and $\beta$ and $\sigma$ are stable,
-the multiplier approaches
-
-$$
-\gamma_p \approx
-\exp\left(
-z_p\beta\sigma-\frac{1}{2}\beta^2\sigma^2
-\right),
-$$
-
-which explains when an approximately fixed reliability multiplier can emerge.
-
-The resulting percentile envelope is shown below. The unshaded region marks
-the empirical detector-mean $D/C$ support; the shaded tails are extrapolation.
-
-![Experiment B reliability envelope](figures/experiment_b_reliability_envelope.png)
-
-The dashed SHRP2 curve is an independent mapping of expected TTI, not a
-percentile from the fitted lognormal model. At mean $D/C=0.4$, the fitted model
-gives $\mathrm{TTI}_{95}=1.061$, whereas the SHRP2 relationship gives 1.196.
-Both approach 1 only in the free-flow limit $D/C\to0$, which lies outside the
-displayed range.
-
-Outputs:
-
-- `results/b3_delay_fit_predictions.csv`: observed and fitted detector-day TTI
-- `results/b3_reliability_envelope.csv`: percentile curves from mean D/C 0.4
-  to 1.3, with observed-support flags
-- `results/b3_summary.json`: calibrated parameters, fit diagnostics, and scope
-- `figures/experiment_b_delay_calibration.png`: observed TTI and fitted delay
-  curve
-- `figures/experiment_b_reliability_envelope.png`: TTI percentile envelope and
-  SHRP2 comparison
-
-The calibration figure and `b3_summary.json` must be read with the envelope.
-A completed pipeline is not by itself evidence that the delay curve has strong
-predictive fit.
-
-Run the full Experiment B pipeline with:
-
-```bash
+pip install -r requirements.txt
+python scripts/run_all.py
 python scripts/run_experiment_b.py
+python -m pytest tests
 ```
 
-The repository includes the quality-controlled detector-day table required by
-Steps B2 and B3. They can be reproduced directly with:
+The PeMS inputs are included. The NVTA runs need the licensed RITIS export,
+the CBI calibration package and the Cube network, which are not
+redistributed. Point `NVTA_EXTERNAL_ROOT` at the folder that contains them,
+then run the scripts in order:
 
 ```bash
-python scripts/b2_calibrate_sigma.py
-python scripts/b3_reliability_envelope.py
+python nvta/c3-qvdf-reliability/run_nvta_c3.py
+python nvta/c4-variability-decomposition/run_nvta_c4.py
+python nvta/c5-pti-tti-comparison/run_nvta_c5.py
+python nvta/c6-managed-lane-comparison/run_nvta_c6.py
+python nvta/core_evidence.py
 ```
-
-Rebuilding Step B1 requires the original PeMS source files, which are not
-redistributed here. Place them under `raw_data/` using the filenames listed in
-`config/experiment_b.json`, or replace those entries with absolute paths on
-your machine. The `raw_data/` directory is excluded from version control.

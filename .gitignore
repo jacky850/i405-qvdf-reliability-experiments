@@ -3,3 +3,7 @@ __pycache__/
 .DS_Store
 .pytest_cache/
 raw_data/
+
+# Internal correspondence and local matplotlib caches
+Memo_to_*.pdf
+mplconfig/

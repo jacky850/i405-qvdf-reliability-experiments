@@ -1,0 +1,783 @@
+corridor,facility,tmc_code,date_local,eligible_at_0.90,eligible_at_0.95,eligible_at_1.00,eligible_at_1.05,eligible_at_1.10,common_support
+I-95 HOV NB,HOV,110+04658,2025-10-01,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04658,2025-10-02,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04658,2025-10-03,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04658,2025-10-06,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04658,2025-10-07,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04658,2025-10-08,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04658,2025-10-09,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04658,2025-10-10,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04658,2025-10-13,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04658,2025-10-14,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04658,2025-10-15,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04658,2025-10-16,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04658,2025-10-17,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04658,2025-10-20,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04658,2025-10-21,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04658,2025-10-22,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04658,2025-10-23,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04658,2025-10-24,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04658,2025-10-27,True,True,True,True,True,True
+I-95 HOV NB,HOV,110+04658,2025-10-28,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04658,2025-10-29,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04658,2025-10-30,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04658,2025-10-31,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04661,2025-10-01,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04661,2025-10-02,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04661,2025-10-03,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04661,2025-10-06,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04661,2025-10-07,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04661,2025-10-08,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04661,2025-10-09,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04661,2025-10-10,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04661,2025-10-13,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04661,2025-10-14,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04661,2025-10-15,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04661,2025-10-16,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04661,2025-10-17,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04661,2025-10-20,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04661,2025-10-21,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04661,2025-10-22,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04661,2025-10-23,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04661,2025-10-24,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04661,2025-10-27,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04661,2025-10-28,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04661,2025-10-29,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04661,2025-10-30,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04661,2025-10-31,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04662,2025-10-01,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04662,2025-10-02,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04662,2025-10-03,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04662,2025-10-06,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04662,2025-10-07,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04662,2025-10-08,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04662,2025-10-09,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04662,2025-10-10,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04662,2025-10-13,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04662,2025-10-14,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04662,2025-10-15,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04662,2025-10-16,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04662,2025-10-17,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04662,2025-10-20,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04662,2025-10-21,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04662,2025-10-22,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04662,2025-10-23,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04662,2025-10-24,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04662,2025-10-27,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04662,2025-10-28,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04662,2025-10-29,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04662,2025-10-30,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04662,2025-10-31,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04666,2025-10-01,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04666,2025-10-02,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04666,2025-10-03,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04666,2025-10-06,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04666,2025-10-07,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04666,2025-10-08,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04666,2025-10-09,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04666,2025-10-10,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04666,2025-10-13,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04666,2025-10-14,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04666,2025-10-15,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04666,2025-10-16,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04666,2025-10-17,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04666,2025-10-20,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04666,2025-10-21,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04666,2025-10-22,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04666,2025-10-23,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04666,2025-10-24,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04666,2025-10-27,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04666,2025-10-28,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04666,2025-10-29,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04666,2025-10-30,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04666,2025-10-31,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04667,2025-10-01,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04667,2025-10-02,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04667,2025-10-03,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04667,2025-10-06,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04667,2025-10-07,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04667,2025-10-08,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04667,2025-10-09,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04667,2025-10-10,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04667,2025-10-13,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04667,2025-10-14,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04667,2025-10-15,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04667,2025-10-16,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04667,2025-10-17,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04667,2025-10-20,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04667,2025-10-21,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04667,2025-10-22,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04667,2025-10-23,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04667,2025-10-24,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04667,2025-10-27,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04667,2025-10-28,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04667,2025-10-29,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04667,2025-10-30,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04667,2025-10-31,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04668,2025-10-01,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04668,2025-10-02,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04668,2025-10-03,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04668,2025-10-06,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04668,2025-10-07,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04668,2025-10-08,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04668,2025-10-09,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04668,2025-10-10,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04668,2025-10-13,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04668,2025-10-14,False,False,True,True,True,False
+I-95 HOV NB,HOV,110+04668,2025-10-15,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04668,2025-10-16,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04668,2025-10-17,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04668,2025-10-20,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04668,2025-10-21,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04668,2025-10-22,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04668,2025-10-23,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04668,2025-10-24,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04668,2025-10-27,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04668,2025-10-28,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04668,2025-10-29,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04668,2025-10-30,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04668,2025-10-31,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04669,2025-10-01,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04669,2025-10-02,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04669,2025-10-03,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04669,2025-10-06,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04669,2025-10-07,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04669,2025-10-08,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04669,2025-10-09,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04669,2025-10-10,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04669,2025-10-13,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04669,2025-10-14,True,True,True,True,True,True
+I-95 HOV NB,HOV,110+04669,2025-10-15,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04669,2025-10-16,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04669,2025-10-17,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04669,2025-10-20,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04669,2025-10-21,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04669,2025-10-22,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04669,2025-10-23,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04669,2025-10-24,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04669,2025-10-27,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04669,2025-10-28,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04669,2025-10-29,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04669,2025-10-30,False,False,False,False,False,False
+I-95 HOV NB,HOV,110+04669,2025-10-31,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04660,2025-10-01,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04660,2025-10-02,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04660,2025-10-03,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04660,2025-10-06,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04660,2025-10-07,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04660,2025-10-08,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04660,2025-10-09,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04660,2025-10-10,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04660,2025-10-13,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04660,2025-10-14,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04660,2025-10-15,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04660,2025-10-16,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04660,2025-10-17,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04660,2025-10-20,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04660,2025-10-21,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04660,2025-10-22,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04660,2025-10-23,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04660,2025-10-24,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04660,2025-10-27,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04660,2025-10-28,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04660,2025-10-29,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04660,2025-10-30,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04660,2025-10-31,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04661,2025-10-01,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04661,2025-10-02,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04661,2025-10-03,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04661,2025-10-06,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04661,2025-10-07,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04661,2025-10-08,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04661,2025-10-09,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04661,2025-10-10,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04661,2025-10-13,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04661,2025-10-14,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04661,2025-10-15,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04661,2025-10-16,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04661,2025-10-17,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04661,2025-10-20,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04661,2025-10-21,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04661,2025-10-22,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04661,2025-10-23,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04661,2025-10-24,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04661,2025-10-27,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04661,2025-10-28,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04661,2025-10-29,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04661,2025-10-30,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04661,2025-10-31,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04662,2025-10-01,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04662,2025-10-02,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04662,2025-10-03,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04662,2025-10-06,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04662,2025-10-07,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04662,2025-10-08,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04662,2025-10-09,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04662,2025-10-10,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04662,2025-10-13,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04662,2025-10-14,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04662,2025-10-15,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04662,2025-10-16,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04662,2025-10-17,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04662,2025-10-20,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04662,2025-10-21,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04662,2025-10-22,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04662,2025-10-23,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04662,2025-10-24,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04662,2025-10-27,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04662,2025-10-28,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04662,2025-10-29,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04662,2025-10-30,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04662,2025-10-31,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04665,2025-10-01,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04665,2025-10-02,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04665,2025-10-03,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04665,2025-10-06,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04665,2025-10-07,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04665,2025-10-08,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04665,2025-10-09,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04665,2025-10-10,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04665,2025-10-13,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04665,2025-10-14,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04665,2025-10-15,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04665,2025-10-16,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04665,2025-10-17,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04665,2025-10-20,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04665,2025-10-21,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04665,2025-10-22,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04665,2025-10-23,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04665,2025-10-24,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04665,2025-10-27,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04665,2025-10-28,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04665,2025-10-29,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04665,2025-10-30,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04665,2025-10-31,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04666,2025-10-01,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04666,2025-10-02,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04666,2025-10-03,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04666,2025-10-06,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04666,2025-10-07,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04666,2025-10-08,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04666,2025-10-09,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04666,2025-10-10,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04666,2025-10-13,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04666,2025-10-14,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04666,2025-10-15,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04666,2025-10-16,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04666,2025-10-17,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04666,2025-10-20,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04666,2025-10-21,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04666,2025-10-22,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04666,2025-10-23,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04666,2025-10-24,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04666,2025-10-27,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04666,2025-10-28,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04666,2025-10-29,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04666,2025-10-30,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04666,2025-10-31,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04667,2025-10-01,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04667,2025-10-02,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04667,2025-10-03,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04667,2025-10-06,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04667,2025-10-07,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04667,2025-10-08,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04667,2025-10-09,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04667,2025-10-10,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04667,2025-10-13,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04667,2025-10-14,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04667,2025-10-15,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04667,2025-10-16,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04667,2025-10-17,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04667,2025-10-20,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04667,2025-10-21,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04667,2025-10-22,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04667,2025-10-23,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04667,2025-10-24,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04667,2025-10-27,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04667,2025-10-28,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04667,2025-10-29,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04667,2025-10-30,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04667,2025-10-31,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04668,2025-10-01,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04668,2025-10-02,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04668,2025-10-03,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04668,2025-10-06,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04668,2025-10-07,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04668,2025-10-08,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04668,2025-10-09,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04668,2025-10-10,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04668,2025-10-13,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04668,2025-10-14,True,True,True,True,True,True
+I-95 HOV NB,HOV,110P04668,2025-10-15,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04668,2025-10-16,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04668,2025-10-17,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04668,2025-10-20,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04668,2025-10-21,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04668,2025-10-22,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04668,2025-10-23,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04668,2025-10-24,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04668,2025-10-27,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04668,2025-10-28,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04668,2025-10-29,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04668,2025-10-30,False,False,False,False,False,False
+I-95 HOV NB,HOV,110P04668,2025-10-31,False,False,False,False,False,False
+I-95 NB,GP,110+04147,2025-10-01,False,False,False,False,False,False
+I-95 NB,GP,110+04147,2025-10-02,False,False,False,False,False,False
+I-95 NB,GP,110+04147,2025-10-03,False,False,False,False,False,False
+I-95 NB,GP,110+04147,2025-10-06,False,False,False,False,False,False
+I-95 NB,GP,110+04147,2025-10-07,False,False,False,False,False,False
+I-95 NB,GP,110+04147,2025-10-08,False,False,False,False,False,False
+I-95 NB,GP,110+04147,2025-10-09,False,False,False,False,False,False
+I-95 NB,GP,110+04147,2025-10-10,False,False,False,False,False,False
+I-95 NB,GP,110+04147,2025-10-13,False,False,False,False,False,False
+I-95 NB,GP,110+04147,2025-10-14,False,False,False,False,False,False
+I-95 NB,GP,110+04147,2025-10-15,False,False,False,False,False,False
+I-95 NB,GP,110+04147,2025-10-16,False,False,False,False,False,False
+I-95 NB,GP,110+04147,2025-10-17,False,False,False,False,False,False
+I-95 NB,GP,110+04147,2025-10-20,False,False,False,False,False,False
+I-95 NB,GP,110+04147,2025-10-21,False,False,False,False,False,False
+I-95 NB,GP,110+04147,2025-10-22,False,False,False,False,False,False
+I-95 NB,GP,110+04147,2025-10-23,False,False,False,False,False,False
+I-95 NB,GP,110+04147,2025-10-24,False,False,False,False,False,False
+I-95 NB,GP,110+04147,2025-10-27,False,False,False,False,False,False
+I-95 NB,GP,110+04147,2025-10-28,False,False,False,False,False,False
+I-95 NB,GP,110+04147,2025-10-29,False,False,False,False,False,False
+I-95 NB,GP,110+04147,2025-10-30,True,True,True,True,True,True
+I-95 NB,GP,110+04147,2025-10-31,False,False,False,False,False,False
+I-95 NB,GP,110+04148,2025-10-01,False,False,False,False,False,False
+I-95 NB,GP,110+04148,2025-10-02,False,False,False,False,False,False
+I-95 NB,GP,110+04148,2025-10-03,False,False,False,False,False,False
+I-95 NB,GP,110+04148,2025-10-06,False,False,False,False,False,False
+I-95 NB,GP,110+04148,2025-10-07,True,True,True,True,True,True
+I-95 NB,GP,110+04148,2025-10-08,False,False,False,False,False,False
+I-95 NB,GP,110+04148,2025-10-09,False,False,False,False,False,False
+I-95 NB,GP,110+04148,2025-10-10,False,False,False,False,False,False
+I-95 NB,GP,110+04148,2025-10-13,False,False,False,False,False,False
+I-95 NB,GP,110+04148,2025-10-14,False,False,False,False,False,False
+I-95 NB,GP,110+04148,2025-10-15,False,False,False,False,False,False
+I-95 NB,GP,110+04148,2025-10-16,False,False,False,False,False,False
+I-95 NB,GP,110+04148,2025-10-17,False,False,False,False,False,False
+I-95 NB,GP,110+04148,2025-10-20,False,False,False,False,False,False
+I-95 NB,GP,110+04148,2025-10-21,False,False,False,False,False,False
+I-95 NB,GP,110+04148,2025-10-22,False,False,False,False,False,False
+I-95 NB,GP,110+04148,2025-10-23,False,False,False,False,False,False
+I-95 NB,GP,110+04148,2025-10-24,False,False,False,False,False,False
+I-95 NB,GP,110+04148,2025-10-27,False,False,False,False,False,False
+I-95 NB,GP,110+04148,2025-10-28,False,False,False,False,False,False
+I-95 NB,GP,110+04148,2025-10-29,False,False,False,False,False,False
+I-95 NB,GP,110+04148,2025-10-30,True,True,True,True,True,True
+I-95 NB,GP,110+04148,2025-10-31,False,False,False,False,False,False
+I-95 NB,GP,110+04150,2025-10-01,True,True,True,True,True,True
+I-95 NB,GP,110+04150,2025-10-02,False,False,False,False,False,False
+I-95 NB,GP,110+04150,2025-10-03,True,True,True,True,True,True
+I-95 NB,GP,110+04150,2025-10-06,False,False,False,False,True,False
+I-95 NB,GP,110+04150,2025-10-07,True,True,True,True,True,True
+I-95 NB,GP,110+04150,2025-10-08,False,False,False,True,True,False
+I-95 NB,GP,110+04150,2025-10-09,False,False,False,False,False,False
+I-95 NB,GP,110+04150,2025-10-10,False,False,False,False,False,False
+I-95 NB,GP,110+04150,2025-10-13,False,False,False,False,False,False
+I-95 NB,GP,110+04150,2025-10-14,False,False,False,True,True,False
+I-95 NB,GP,110+04150,2025-10-15,False,False,False,False,False,False
+I-95 NB,GP,110+04150,2025-10-16,False,False,False,True,True,False
+I-95 NB,GP,110+04150,2025-10-17,False,False,False,False,False,False
+I-95 NB,GP,110+04150,2025-10-20,False,False,False,False,False,False
+I-95 NB,GP,110+04150,2025-10-21,True,True,True,True,True,True
+I-95 NB,GP,110+04150,2025-10-22,False,False,False,False,False,False
+I-95 NB,GP,110+04150,2025-10-23,False,False,False,False,False,False
+I-95 NB,GP,110+04150,2025-10-24,True,True,True,True,True,True
+I-95 NB,GP,110+04150,2025-10-27,False,False,False,False,False,False
+I-95 NB,GP,110+04150,2025-10-28,True,True,True,True,True,True
+I-95 NB,GP,110+04150,2025-10-29,True,True,True,True,True,True
+I-95 NB,GP,110+04150,2025-10-30,True,True,True,True,True,True
+I-95 NB,GP,110+04150,2025-10-31,False,False,False,False,False,False
+I-95 NB,GP,110+04151,2025-10-01,True,True,True,True,True,True
+I-95 NB,GP,110+04151,2025-10-02,True,True,True,True,True,True
+I-95 NB,GP,110+04151,2025-10-03,True,True,True,True,True,True
+I-95 NB,GP,110+04151,2025-10-06,True,True,True,True,True,True
+I-95 NB,GP,110+04151,2025-10-07,True,True,True,True,True,True
+I-95 NB,GP,110+04151,2025-10-08,True,True,True,True,True,True
+I-95 NB,GP,110+04151,2025-10-09,True,True,True,True,True,True
+I-95 NB,GP,110+04151,2025-10-10,False,True,True,True,True,False
+I-95 NB,GP,110+04151,2025-10-13,False,False,False,False,False,False
+I-95 NB,GP,110+04151,2025-10-14,True,True,True,True,True,True
+I-95 NB,GP,110+04151,2025-10-15,True,True,True,True,True,True
+I-95 NB,GP,110+04151,2025-10-16,True,True,True,True,True,True
+I-95 NB,GP,110+04151,2025-10-17,True,True,True,True,True,True
+I-95 NB,GP,110+04151,2025-10-20,True,True,True,True,True,True
+I-95 NB,GP,110+04151,2025-10-21,True,True,True,True,True,True
+I-95 NB,GP,110+04151,2025-10-22,True,True,True,True,True,True
+I-95 NB,GP,110+04151,2025-10-23,True,True,True,True,True,True
+I-95 NB,GP,110+04151,2025-10-24,True,True,True,True,True,True
+I-95 NB,GP,110+04151,2025-10-27,True,True,True,True,True,True
+I-95 NB,GP,110+04151,2025-10-28,True,True,True,True,True,True
+I-95 NB,GP,110+04151,2025-10-29,True,True,True,True,True,True
+I-95 NB,GP,110+04151,2025-10-30,True,True,True,True,True,True
+I-95 NB,GP,110+04151,2025-10-31,False,False,False,False,False,False
+I-95 NB,GP,110+04152,2025-10-01,True,True,True,True,True,True
+I-95 NB,GP,110+04152,2025-10-02,True,True,True,True,True,True
+I-95 NB,GP,110+04152,2025-10-03,True,True,True,True,True,True
+I-95 NB,GP,110+04152,2025-10-06,True,True,True,True,True,True
+I-95 NB,GP,110+04152,2025-10-07,True,True,True,True,True,True
+I-95 NB,GP,110+04152,2025-10-08,True,True,True,True,True,True
+I-95 NB,GP,110+04152,2025-10-09,True,True,True,True,True,True
+I-95 NB,GP,110+04152,2025-10-10,True,True,True,True,True,True
+I-95 NB,GP,110+04152,2025-10-13,False,False,False,False,False,False
+I-95 NB,GP,110+04152,2025-10-14,True,True,True,True,True,True
+I-95 NB,GP,110+04152,2025-10-15,True,True,True,True,True,True
+I-95 NB,GP,110+04152,2025-10-16,True,True,True,True,True,True
+I-95 NB,GP,110+04152,2025-10-17,True,True,True,True,True,True
+I-95 NB,GP,110+04152,2025-10-20,True,True,True,True,True,True
+I-95 NB,GP,110+04152,2025-10-21,True,True,True,True,True,True
+I-95 NB,GP,110+04152,2025-10-22,True,True,True,True,True,True
+I-95 NB,GP,110+04152,2025-10-23,True,True,True,True,True,True
+I-95 NB,GP,110+04152,2025-10-24,True,True,True,True,True,True
+I-95 NB,GP,110+04152,2025-10-27,True,True,True,True,True,True
+I-95 NB,GP,110+04152,2025-10-28,True,True,True,True,True,True
+I-95 NB,GP,110+04152,2025-10-29,True,True,True,True,True,True
+I-95 NB,GP,110+04152,2025-10-30,True,True,True,True,True,True
+I-95 NB,GP,110+04152,2025-10-31,True,True,True,True,True,True
+I-95 NB,GP,110+04154,2025-10-01,True,True,True,True,True,True
+I-95 NB,GP,110+04154,2025-10-02,True,True,True,True,True,True
+I-95 NB,GP,110+04154,2025-10-03,False,False,True,True,True,False
+I-95 NB,GP,110+04154,2025-10-06,True,True,True,True,True,True
+I-95 NB,GP,110+04154,2025-10-07,True,True,True,True,True,True
+I-95 NB,GP,110+04154,2025-10-08,True,True,True,True,True,True
+I-95 NB,GP,110+04154,2025-10-09,True,True,True,True,True,True
+I-95 NB,GP,110+04154,2025-10-10,True,True,True,True,True,True
+I-95 NB,GP,110+04154,2025-10-13,False,False,False,False,False,False
+I-95 NB,GP,110+04154,2025-10-14,True,True,True,True,True,True
+I-95 NB,GP,110+04154,2025-10-15,True,True,True,True,True,True
+I-95 NB,GP,110+04154,2025-10-16,True,True,True,True,True,True
+I-95 NB,GP,110+04154,2025-10-17,False,False,False,False,False,False
+I-95 NB,GP,110+04154,2025-10-20,True,True,True,True,True,True
+I-95 NB,GP,110+04154,2025-10-21,True,True,True,True,True,True
+I-95 NB,GP,110+04154,2025-10-22,True,True,True,True,True,True
+I-95 NB,GP,110+04154,2025-10-23,True,True,True,True,True,True
+I-95 NB,GP,110+04154,2025-10-24,True,True,True,True,True,True
+I-95 NB,GP,110+04154,2025-10-27,True,True,True,True,True,True
+I-95 NB,GP,110+04154,2025-10-28,True,True,True,True,True,True
+I-95 NB,GP,110+04154,2025-10-29,True,True,True,True,True,True
+I-95 NB,GP,110+04154,2025-10-30,False,False,True,True,True,False
+I-95 NB,GP,110+04154,2025-10-31,False,False,False,False,False,False
+I-95 NB,GP,110+04155,2025-10-01,True,True,True,True,True,True
+I-95 NB,GP,110+04155,2025-10-02,True,True,True,True,True,True
+I-95 NB,GP,110+04155,2025-10-03,True,True,True,True,True,True
+I-95 NB,GP,110+04155,2025-10-06,True,True,True,True,True,True
+I-95 NB,GP,110+04155,2025-10-07,True,True,True,True,True,True
+I-95 NB,GP,110+04155,2025-10-08,True,True,True,True,True,True
+I-95 NB,GP,110+04155,2025-10-09,True,True,True,True,True,True
+I-95 NB,GP,110+04155,2025-10-10,True,True,True,True,True,True
+I-95 NB,GP,110+04155,2025-10-13,False,False,False,False,False,False
+I-95 NB,GP,110+04155,2025-10-14,True,True,True,True,True,True
+I-95 NB,GP,110+04155,2025-10-15,True,True,True,True,True,True
+I-95 NB,GP,110+04155,2025-10-16,True,True,True,True,True,True
+I-95 NB,GP,110+04155,2025-10-17,True,True,True,True,True,True
+I-95 NB,GP,110+04155,2025-10-20,True,True,True,True,True,True
+I-95 NB,GP,110+04155,2025-10-21,True,True,True,True,True,True
+I-95 NB,GP,110+04155,2025-10-22,True,True,True,True,True,True
+I-95 NB,GP,110+04155,2025-10-23,True,True,True,True,True,True
+I-95 NB,GP,110+04155,2025-10-24,True,True,True,True,True,True
+I-95 NB,GP,110+04155,2025-10-27,True,True,True,True,True,True
+I-95 NB,GP,110+04155,2025-10-28,True,True,True,True,True,True
+I-95 NB,GP,110+04155,2025-10-29,True,True,True,True,True,True
+I-95 NB,GP,110+04155,2025-10-30,True,True,True,True,True,True
+I-95 NB,GP,110+04155,2025-10-31,False,False,True,True,True,False
+I-95 NB,GP,110+04156,2025-10-01,True,True,True,True,True,True
+I-95 NB,GP,110+04156,2025-10-02,True,True,True,True,True,True
+I-95 NB,GP,110+04156,2025-10-03,True,True,True,True,False,False
+I-95 NB,GP,110+04156,2025-10-06,True,True,True,True,True,True
+I-95 NB,GP,110+04156,2025-10-07,True,True,True,True,True,True
+I-95 NB,GP,110+04156,2025-10-08,True,True,True,True,True,True
+I-95 NB,GP,110+04156,2025-10-09,True,True,True,True,True,True
+I-95 NB,GP,110+04156,2025-10-10,True,True,True,True,True,True
+I-95 NB,GP,110+04156,2025-10-13,False,False,False,False,False,False
+I-95 NB,GP,110+04156,2025-10-14,True,True,True,True,True,True
+I-95 NB,GP,110+04156,2025-10-15,True,True,True,True,True,True
+I-95 NB,GP,110+04156,2025-10-16,True,True,True,True,True,True
+I-95 NB,GP,110+04156,2025-10-17,True,True,True,False,False,False
+I-95 NB,GP,110+04156,2025-10-20,True,True,True,True,True,True
+I-95 NB,GP,110+04156,2025-10-21,True,True,True,True,True,True
+I-95 NB,GP,110+04156,2025-10-22,True,True,True,True,True,True
+I-95 NB,GP,110+04156,2025-10-23,True,True,True,False,False,False
+I-95 NB,GP,110+04156,2025-10-24,True,True,True,True,True,True
+I-95 NB,GP,110+04156,2025-10-27,True,True,True,True,True,True
+I-95 NB,GP,110+04156,2025-10-28,True,True,True,True,True,True
+I-95 NB,GP,110+04156,2025-10-29,True,True,True,True,True,True
+I-95 NB,GP,110+04156,2025-10-30,True,True,True,True,True,True
+I-95 NB,GP,110+04156,2025-10-31,True,True,True,True,True,True
+I-95 NB,GP,110+04157,2025-10-01,True,True,True,True,True,True
+I-95 NB,GP,110+04157,2025-10-02,True,True,True,True,True,True
+I-95 NB,GP,110+04157,2025-10-03,False,True,True,True,True,False
+I-95 NB,GP,110+04157,2025-10-06,True,True,True,True,True,True
+I-95 NB,GP,110+04157,2025-10-07,True,True,True,True,True,True
+I-95 NB,GP,110+04157,2025-10-08,True,True,True,True,True,True
+I-95 NB,GP,110+04157,2025-10-09,True,True,True,True,True,True
+I-95 NB,GP,110+04157,2025-10-10,True,True,True,True,True,True
+I-95 NB,GP,110+04157,2025-10-13,False,False,False,False,False,False
+I-95 NB,GP,110+04157,2025-10-14,True,True,True,True,True,True
+I-95 NB,GP,110+04157,2025-10-15,True,True,True,True,True,True
+I-95 NB,GP,110+04157,2025-10-16,True,True,True,True,True,True
+I-95 NB,GP,110+04157,2025-10-17,True,True,True,True,True,True
+I-95 NB,GP,110+04157,2025-10-20,False,False,False,True,True,False
+I-95 NB,GP,110+04157,2025-10-21,True,True,True,True,True,True
+I-95 NB,GP,110+04157,2025-10-22,True,True,True,True,True,True
+I-95 NB,GP,110+04157,2025-10-23,True,True,True,True,True,True
+I-95 NB,GP,110+04157,2025-10-24,True,True,True,True,True,True
+I-95 NB,GP,110+04157,2025-10-27,True,True,True,True,True,True
+I-95 NB,GP,110+04157,2025-10-28,True,True,True,True,True,True
+I-95 NB,GP,110+04157,2025-10-29,True,True,True,True,True,True
+I-95 NB,GP,110+04157,2025-10-30,True,True,True,True,True,True
+I-95 NB,GP,110+04157,2025-10-31,True,True,True,True,True,True
+I-95 NB,GP,110+04158,2025-10-01,True,True,True,True,True,True
+I-95 NB,GP,110+04158,2025-10-02,False,False,True,True,True,False
+I-95 NB,GP,110+04158,2025-10-03,False,False,False,True,True,False
+I-95 NB,GP,110+04158,2025-10-06,False,False,True,True,True,False
+I-95 NB,GP,110+04158,2025-10-07,True,True,True,True,True,True
+I-95 NB,GP,110+04158,2025-10-08,True,True,True,True,True,True
+I-95 NB,GP,110+04158,2025-10-09,True,True,True,True,True,True
+I-95 NB,GP,110+04158,2025-10-10,True,True,True,True,True,True
+I-95 NB,GP,110+04158,2025-10-13,False,False,False,False,False,False
+I-95 NB,GP,110+04158,2025-10-14,True,True,True,True,True,True
+I-95 NB,GP,110+04158,2025-10-15,True,True,True,True,True,True
+I-95 NB,GP,110+04158,2025-10-16,True,True,True,True,True,True
+I-95 NB,GP,110+04158,2025-10-17,False,False,False,False,True,False
+I-95 NB,GP,110+04158,2025-10-20,False,False,False,False,True,False
+I-95 NB,GP,110+04158,2025-10-21,False,False,False,False,True,False
+I-95 NB,GP,110+04158,2025-10-22,True,True,True,True,True,True
+I-95 NB,GP,110+04158,2025-10-23,False,True,True,True,True,False
+I-95 NB,GP,110+04158,2025-10-24,False,False,False,False,True,False
+I-95 NB,GP,110+04158,2025-10-27,False,False,True,True,True,False
+I-95 NB,GP,110+04158,2025-10-28,False,True,True,True,True,False
+I-95 NB,GP,110+04158,2025-10-29,True,True,True,True,True,True
+I-95 NB,GP,110+04158,2025-10-30,True,True,True,True,True,True
+I-95 NB,GP,110+04158,2025-10-31,True,True,True,True,True,True
+I-95 NB,GP,110P04146,2025-10-01,False,False,False,False,False,False
+I-95 NB,GP,110P04146,2025-10-02,False,False,False,False,False,False
+I-95 NB,GP,110P04146,2025-10-03,False,False,False,False,False,False
+I-95 NB,GP,110P04146,2025-10-06,False,False,False,False,False,False
+I-95 NB,GP,110P04146,2025-10-07,False,False,False,False,False,False
+I-95 NB,GP,110P04146,2025-10-08,False,False,False,False,False,False
+I-95 NB,GP,110P04146,2025-10-09,False,False,False,False,False,False
+I-95 NB,GP,110P04146,2025-10-10,False,False,False,False,False,False
+I-95 NB,GP,110P04146,2025-10-13,False,False,False,False,False,False
+I-95 NB,GP,110P04146,2025-10-14,False,False,False,False,False,False
+I-95 NB,GP,110P04146,2025-10-15,False,False,False,False,False,False
+I-95 NB,GP,110P04146,2025-10-16,False,False,False,False,False,False
+I-95 NB,GP,110P04146,2025-10-17,False,False,False,False,False,False
+I-95 NB,GP,110P04146,2025-10-20,False,False,False,False,False,False
+I-95 NB,GP,110P04146,2025-10-21,False,False,False,False,False,False
+I-95 NB,GP,110P04146,2025-10-22,False,False,False,False,False,False
+I-95 NB,GP,110P04146,2025-10-23,False,False,False,False,False,False
+I-95 NB,GP,110P04146,2025-10-24,False,False,False,False,False,False
+I-95 NB,GP,110P04146,2025-10-27,False,False,False,False,False,False
+I-95 NB,GP,110P04146,2025-10-28,False,False,False,False,False,False
+I-95 NB,GP,110P04146,2025-10-29,False,False,False,False,False,False
+I-95 NB,GP,110P04146,2025-10-30,True,True,True,True,True,True
+I-95 NB,GP,110P04146,2025-10-31,False,False,False,False,False,False
+I-95 NB,GP,110P04147,2025-10-01,False,False,False,False,False,False
+I-95 NB,GP,110P04147,2025-10-02,False,False,False,False,False,False
+I-95 NB,GP,110P04147,2025-10-03,False,False,False,False,False,False
+I-95 NB,GP,110P04147,2025-10-06,False,False,False,False,False,False
+I-95 NB,GP,110P04147,2025-10-07,False,False,False,False,False,False
+I-95 NB,GP,110P04147,2025-10-08,False,False,False,False,False,False
+I-95 NB,GP,110P04147,2025-10-09,False,False,False,False,False,False
+I-95 NB,GP,110P04147,2025-10-10,False,False,False,False,False,False
+I-95 NB,GP,110P04147,2025-10-13,False,False,False,False,False,False
+I-95 NB,GP,110P04147,2025-10-14,False,False,False,False,False,False
+I-95 NB,GP,110P04147,2025-10-15,False,False,False,False,False,False
+I-95 NB,GP,110P04147,2025-10-16,False,False,False,False,False,False
+I-95 NB,GP,110P04147,2025-10-17,False,False,False,False,False,False
+I-95 NB,GP,110P04147,2025-10-20,False,False,False,False,False,False
+I-95 NB,GP,110P04147,2025-10-21,False,False,False,False,False,False
+I-95 NB,GP,110P04147,2025-10-22,False,False,False,False,False,False
+I-95 NB,GP,110P04147,2025-10-23,False,False,False,False,False,False
+I-95 NB,GP,110P04147,2025-10-24,False,False,False,False,False,False
+I-95 NB,GP,110P04147,2025-10-27,False,False,False,False,False,False
+I-95 NB,GP,110P04147,2025-10-28,False,False,False,False,False,False
+I-95 NB,GP,110P04147,2025-10-29,False,False,False,False,False,False
+I-95 NB,GP,110P04147,2025-10-30,True,True,True,True,True,True
+I-95 NB,GP,110P04147,2025-10-31,False,False,False,False,False,False
+I-95 NB,GP,110P04150,2025-10-01,True,True,True,True,True,True
+I-95 NB,GP,110P04150,2025-10-02,False,False,True,True,True,False
+I-95 NB,GP,110P04150,2025-10-03,True,True,True,True,True,True
+I-95 NB,GP,110P04150,2025-10-06,True,True,True,True,True,True
+I-95 NB,GP,110P04150,2025-10-07,True,True,True,True,True,True
+I-95 NB,GP,110P04150,2025-10-08,True,True,True,True,True,True
+I-95 NB,GP,110P04150,2025-10-09,True,True,True,True,True,True
+I-95 NB,GP,110P04150,2025-10-10,False,False,False,False,False,False
+I-95 NB,GP,110P04150,2025-10-13,False,False,False,False,False,False
+I-95 NB,GP,110P04150,2025-10-14,True,True,True,True,True,True
+I-95 NB,GP,110P04150,2025-10-15,True,True,True,True,True,True
+I-95 NB,GP,110P04150,2025-10-16,True,True,True,True,True,True
+I-95 NB,GP,110P04150,2025-10-17,False,False,False,False,False,False
+I-95 NB,GP,110P04150,2025-10-20,False,False,False,False,False,False
+I-95 NB,GP,110P04150,2025-10-21,True,True,True,True,True,True
+I-95 NB,GP,110P04150,2025-10-22,True,True,True,True,True,True
+I-95 NB,GP,110P04150,2025-10-23,False,False,True,True,True,False
+I-95 NB,GP,110P04150,2025-10-24,True,True,True,True,True,True
+I-95 NB,GP,110P04150,2025-10-27,False,False,False,False,False,False
+I-95 NB,GP,110P04150,2025-10-28,True,True,True,True,True,True
+I-95 NB,GP,110P04150,2025-10-29,True,True,True,True,True,True
+I-95 NB,GP,110P04150,2025-10-30,True,True,True,True,True,True
+I-95 NB,GP,110P04150,2025-10-31,False,False,False,False,False,False
+I-95 NB,GP,110P04151,2025-10-01,True,True,True,True,True,True
+I-95 NB,GP,110P04151,2025-10-02,True,True,True,True,True,True
+I-95 NB,GP,110P04151,2025-10-03,True,True,True,True,True,True
+I-95 NB,GP,110P04151,2025-10-06,True,True,True,True,True,True
+I-95 NB,GP,110P04151,2025-10-07,True,True,True,True,True,True
+I-95 NB,GP,110P04151,2025-10-08,True,True,True,True,True,True
+I-95 NB,GP,110P04151,2025-10-09,True,True,True,True,True,True
+I-95 NB,GP,110P04151,2025-10-10,False,False,False,True,True,False
+I-95 NB,GP,110P04151,2025-10-13,False,False,False,False,False,False
+I-95 NB,GP,110P04151,2025-10-14,True,True,True,True,True,True
+I-95 NB,GP,110P04151,2025-10-15,True,True,True,True,True,True
+I-95 NB,GP,110P04151,2025-10-16,True,True,True,True,True,True
+I-95 NB,GP,110P04151,2025-10-17,True,True,True,True,True,True
+I-95 NB,GP,110P04151,2025-10-20,True,True,True,True,True,True
+I-95 NB,GP,110P04151,2025-10-21,True,True,True,True,True,True
+I-95 NB,GP,110P04151,2025-10-22,True,True,True,True,True,True
+I-95 NB,GP,110P04151,2025-10-23,True,True,True,True,True,True
+I-95 NB,GP,110P04151,2025-10-24,True,True,True,True,True,True
+I-95 NB,GP,110P04151,2025-10-27,True,True,True,True,True,True
+I-95 NB,GP,110P04151,2025-10-28,True,True,True,True,True,True
+I-95 NB,GP,110P04151,2025-10-29,True,True,True,True,True,True
+I-95 NB,GP,110P04151,2025-10-30,True,True,True,True,True,True
+I-95 NB,GP,110P04151,2025-10-31,True,True,True,True,True,True
+I-95 NB,GP,110P04153,2025-10-01,True,True,True,True,True,True
+I-95 NB,GP,110P04153,2025-10-02,False,False,False,False,False,False
+I-95 NB,GP,110P04153,2025-10-03,False,False,False,False,False,False
+I-95 NB,GP,110P04153,2025-10-06,False,True,True,True,True,False
+I-95 NB,GP,110P04153,2025-10-07,True,True,True,True,True,True
+I-95 NB,GP,110P04153,2025-10-08,True,True,True,True,True,True
+I-95 NB,GP,110P04153,2025-10-09,True,True,True,True,True,True
+I-95 NB,GP,110P04153,2025-10-10,True,True,True,True,True,True
+I-95 NB,GP,110P04153,2025-10-13,False,False,False,False,False,False
+I-95 NB,GP,110P04153,2025-10-14,True,True,True,True,True,True
+I-95 NB,GP,110P04153,2025-10-15,False,False,False,True,True,False
+I-95 NB,GP,110P04153,2025-10-16,False,False,False,False,False,False
+I-95 NB,GP,110P04153,2025-10-17,False,False,False,False,False,False
+I-95 NB,GP,110P04153,2025-10-20,True,True,True,True,True,True
+I-95 NB,GP,110P04153,2025-10-21,True,True,True,True,True,True
+I-95 NB,GP,110P04153,2025-10-22,True,True,True,True,True,True
+I-95 NB,GP,110P04153,2025-10-23,False,True,True,True,True,False
+I-95 NB,GP,110P04153,2025-10-24,False,False,False,False,False,False
+I-95 NB,GP,110P04153,2025-10-27,False,False,False,False,False,False
+I-95 NB,GP,110P04153,2025-10-28,False,False,False,False,False,False
+I-95 NB,GP,110P04153,2025-10-29,True,True,True,True,True,True
+I-95 NB,GP,110P04153,2025-10-30,False,False,False,False,False,False
+I-95 NB,GP,110P04153,2025-10-31,False,False,False,False,False,False
+I-95 NB,GP,110P04154,2025-10-01,True,True,True,True,True,True
+I-95 NB,GP,110P04154,2025-10-02,True,True,True,True,True,True
+I-95 NB,GP,110P04154,2025-10-03,True,True,True,True,True,True
+I-95 NB,GP,110P04154,2025-10-06,True,True,True,True,True,True
+I-95 NB,GP,110P04154,2025-10-07,True,True,True,True,True,True
+I-95 NB,GP,110P04154,2025-10-08,True,True,True,True,True,True
+I-95 NB,GP,110P04154,2025-10-09,True,True,True,True,True,True
+I-95 NB,GP,110P04154,2025-10-10,True,True,True,True,True,True
+I-95 NB,GP,110P04154,2025-10-13,False,False,False,False,False,False
+I-95 NB,GP,110P04154,2025-10-14,True,True,True,True,True,True
+I-95 NB,GP,110P04154,2025-10-15,True,True,True,True,True,True
+I-95 NB,GP,110P04154,2025-10-16,True,True,True,True,True,True
+I-95 NB,GP,110P04154,2025-10-17,False,True,True,True,True,False
+I-95 NB,GP,110P04154,2025-10-20,True,True,True,True,True,True
+I-95 NB,GP,110P04154,2025-10-21,True,True,True,True,True,True
+I-95 NB,GP,110P04154,2025-10-22,True,True,True,True,True,True
+I-95 NB,GP,110P04154,2025-10-23,True,True,True,True,True,True
+I-95 NB,GP,110P04154,2025-10-24,False,True,True,True,True,False
+I-95 NB,GP,110P04154,2025-10-27,True,True,True,True,True,True
+I-95 NB,GP,110P04154,2025-10-28,True,True,True,True,True,True
+I-95 NB,GP,110P04154,2025-10-29,True,True,True,True,True,True
+I-95 NB,GP,110P04154,2025-10-30,False,True,True,True,True,False
+I-95 NB,GP,110P04154,2025-10-31,False,False,False,False,False,False
+I-95 NB,GP,110P04155,2025-10-01,True,True,True,True,True,True
+I-95 NB,GP,110P04155,2025-10-02,True,True,True,True,True,True
+I-95 NB,GP,110P04155,2025-10-03,True,True,True,True,False,False
+I-95 NB,GP,110P04155,2025-10-06,True,True,True,True,True,True
+I-95 NB,GP,110P04155,2025-10-07,True,True,True,True,True,True
+I-95 NB,GP,110P04155,2025-10-08,True,True,True,True,True,True
+I-95 NB,GP,110P04155,2025-10-09,True,True,True,True,True,True
+I-95 NB,GP,110P04155,2025-10-10,True,True,True,True,True,True
+I-95 NB,GP,110P04155,2025-10-13,False,False,False,False,False,False
+I-95 NB,GP,110P04155,2025-10-14,True,True,True,True,True,True
+I-95 NB,GP,110P04155,2025-10-15,True,True,True,True,True,True
+I-95 NB,GP,110P04155,2025-10-16,True,True,True,True,True,True
+I-95 NB,GP,110P04155,2025-10-17,True,True,True,True,True,True
+I-95 NB,GP,110P04155,2025-10-20,True,True,True,True,True,True
+I-95 NB,GP,110P04155,2025-10-21,True,True,True,True,True,True
+I-95 NB,GP,110P04155,2025-10-22,True,True,True,True,True,True
+I-95 NB,GP,110P04155,2025-10-23,True,True,True,True,True,True
+I-95 NB,GP,110P04155,2025-10-24,True,True,True,True,True,True
+I-95 NB,GP,110P04155,2025-10-27,True,True,True,True,True,True
+I-95 NB,GP,110P04155,2025-10-28,True,True,True,True,True,True
+I-95 NB,GP,110P04155,2025-10-29,True,True,True,True,True,True
+I-95 NB,GP,110P04155,2025-10-30,True,True,True,True,True,True
+I-95 NB,GP,110P04155,2025-10-31,True,True,True,True,True,True
+I-95 NB,GP,110P04156,2025-10-01,True,True,True,True,True,True
+I-95 NB,GP,110P04156,2025-10-02,True,True,True,True,True,True
+I-95 NB,GP,110P04156,2025-10-03,True,True,True,True,True,True
+I-95 NB,GP,110P04156,2025-10-06,True,True,True,True,True,True
+I-95 NB,GP,110P04156,2025-10-07,True,True,True,True,True,True
+I-95 NB,GP,110P04156,2025-10-08,True,True,True,True,True,True
+I-95 NB,GP,110P04156,2025-10-09,True,True,True,True,True,True
+I-95 NB,GP,110P04156,2025-10-10,True,True,True,True,True,True
+I-95 NB,GP,110P04156,2025-10-13,False,False,False,False,False,False
+I-95 NB,GP,110P04156,2025-10-14,True,True,True,True,True,True
+I-95 NB,GP,110P04156,2025-10-15,True,True,True,True,True,True
+I-95 NB,GP,110P04156,2025-10-16,True,True,True,True,True,True
+I-95 NB,GP,110P04156,2025-10-17,True,True,True,True,True,True
+I-95 NB,GP,110P04156,2025-10-20,False,True,True,True,True,False
+I-95 NB,GP,110P04156,2025-10-21,True,True,True,True,True,True
+I-95 NB,GP,110P04156,2025-10-22,True,True,True,True,True,True
+I-95 NB,GP,110P04156,2025-10-23,True,True,True,True,True,True
+I-95 NB,GP,110P04156,2025-10-24,True,True,True,True,True,True
+I-95 NB,GP,110P04156,2025-10-27,True,True,True,True,True,True
+I-95 NB,GP,110P04156,2025-10-28,True,True,True,True,True,True
+I-95 NB,GP,110P04156,2025-10-29,True,True,True,True,True,True
+I-95 NB,GP,110P04156,2025-10-30,True,True,True,True,True,True
+I-95 NB,GP,110P04156,2025-10-31,True,True,True,True,True,True
+I-95 NB,GP,110P04157,2025-10-01,True,True,True,True,True,True
+I-95 NB,GP,110P04157,2025-10-02,True,True,True,True,True,True
+I-95 NB,GP,110P04157,2025-10-03,False,False,True,True,True,False
+I-95 NB,GP,110P04157,2025-10-06,False,True,True,True,True,False
+I-95 NB,GP,110P04157,2025-10-07,True,True,True,True,True,True
+I-95 NB,GP,110P04157,2025-10-08,True,True,True,True,True,True
+I-95 NB,GP,110P04157,2025-10-09,True,True,True,True,True,True
+I-95 NB,GP,110P04157,2025-10-10,True,True,True,True,True,True
+I-95 NB,GP,110P04157,2025-10-13,False,False,False,False,False,False
+I-95 NB,GP,110P04157,2025-10-14,True,True,True,True,True,True
+I-95 NB,GP,110P04157,2025-10-15,True,True,True,True,True,True
+I-95 NB,GP,110P04157,2025-10-16,True,True,True,True,True,True
+I-95 NB,GP,110P04157,2025-10-17,False,False,True,True,True,False
+I-95 NB,GP,110P04157,2025-10-20,False,False,False,True,True,False
+I-95 NB,GP,110P04157,2025-10-21,False,True,True,True,True,False
+I-95 NB,GP,110P04157,2025-10-22,True,True,True,True,True,True
+I-95 NB,GP,110P04157,2025-10-23,True,True,True,True,True,True
+I-95 NB,GP,110P04157,2025-10-24,False,True,True,True,True,False
+I-95 NB,GP,110P04157,2025-10-27,True,True,True,True,True,True
+I-95 NB,GP,110P04157,2025-10-28,True,True,True,True,True,True
+I-95 NB,GP,110P04157,2025-10-29,True,True,True,True,True,True
+I-95 NB,GP,110P04157,2025-10-30,True,True,True,True,True,True
+I-95 NB,GP,110P04157,2025-10-31,True,True,True,True,True,True
+I-95 NB,GP,110P04159,2025-10-01,True,True,True,True,True,True
+I-95 NB,GP,110P04159,2025-10-02,True,True,True,True,True,True
+I-95 NB,GP,110P04159,2025-10-03,False,False,False,False,False,False
+I-95 NB,GP,110P04159,2025-10-06,False,False,False,False,False,False
+I-95 NB,GP,110P04159,2025-10-07,False,False,False,False,False,False
+I-95 NB,GP,110P04159,2025-10-08,True,True,True,True,True,True
+I-95 NB,GP,110P04159,2025-10-09,True,True,True,True,True,True
+I-95 NB,GP,110P04159,2025-10-10,False,False,False,False,False,False
+I-95 NB,GP,110P04159,2025-10-13,False,False,False,False,False,False
+I-95 NB,GP,110P04159,2025-10-14,True,True,True,True,True,True
+I-95 NB,GP,110P04159,2025-10-15,True,True,True,True,True,True
+I-95 NB,GP,110P04159,2025-10-16,True,True,True,True,True,True
+I-95 NB,GP,110P04159,2025-10-17,False,False,False,False,False,False
+I-95 NB,GP,110P04159,2025-10-20,False,False,False,False,False,False
+I-95 NB,GP,110P04159,2025-10-21,False,False,False,False,False,False
+I-95 NB,GP,110P04159,2025-10-22,False,False,False,False,False,False
+I-95 NB,GP,110P04159,2025-10-23,False,False,True,True,True,False
+I-95 NB,GP,110P04159,2025-10-24,False,False,False,False,False,False
+I-95 NB,GP,110P04159,2025-10-27,False,False,False,False,False,False
+I-95 NB,GP,110P04159,2025-10-28,True,True,True,True,True,True
+I-95 NB,GP,110P04159,2025-10-29,False,False,False,False,False,False
+I-95 NB,GP,110P04159,2025-10-30,False,False,False,False,False,False
+I-95 NB,GP,110P04159,2025-10-31,False,False,False,True,True,False

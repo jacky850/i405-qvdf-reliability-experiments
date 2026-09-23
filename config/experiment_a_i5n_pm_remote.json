@@ -1,0 +1,17 @@
+{
+  "corridor_id": "D12_I5_N",
+  "period_start": "15:00",
+  "period_end": "19:00",
+  "sample_start_date": "2025-07-07",
+  "sample_end_date": "2025-07-25",
+  "upstream_segment_index": 39,
+  "bottleneck_segment_indices": [43, 44, 45],
+  "minimum_pct_observed": 75,
+  "demand_window_bins": 12,
+  "speed_threshold_multipliers": [0.90, 0.95, 1.00, 1.05, 1.10],
+  "smoothing_bins": 3,
+  "minimum_episode_bins": 3,
+  "fit_n_min": 1.0,
+  "fit_n_max": 4.0,
+  "fit_n_step": 0.001
+}

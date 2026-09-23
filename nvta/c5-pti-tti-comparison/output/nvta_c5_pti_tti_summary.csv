@@ -1,0 +1,19 @@
+result_group,metric,value,unit,sample,interpretation
+observed_relationship,tti_pti95_pearson_r,0.9427117711513764,correlation,10 TMCs; 133 accepted episode-days,strong within-corridor association
+observed_relationship,tti_pti95_spearman_rho,0.9272727272727272,correlation,10 TMCs; 133 accepted episode-days,strong monotonic association
+coefficient_comparison,shrp2_k,3.67,coefficient,published benchmark supplied by project scope,PTI95 = 1 + 3.67 ln(TTI)
+coefficient_comparison,i95_sb_gp_pm_local_k,2.6853567155278864,coefficient,10 TMCs,bootstrap 95% interval 2.488 to 2.922
+coefficient_comparison,local_k_divided_by_shrp2_k,0.7317048271193151,ratio,10 TMCs,local slope as a share of the SHRP2 slope
+shrp2_benchmark,pti95_pearson_r,0.9667507788091599,correlation,10 TMCs,observed versus predicted PTI95
+shrp2_benchmark,pti95_spearman_rho,0.9272727272727272,correlation,10 TMCs,rank association
+shrp2_benchmark,pti95_mae,0.9400627486071563,PTI points,10 TMCs,bootstrap 95% interval 0.690 to 1.218
+shrp2_benchmark,pti95_rmse,1.025600656410073,PTI points,10 TMCs,root mean squared error
+shrp2_benchmark,pti95_bias,0.9400627486071563,PTI points,10 TMCs,predicted minus observed
+local_loto,pti95_pearson_r,0.9536877481421211,correlation,10 TMCs,observed versus predicted PTI95
+local_loto,pti95_spearman_rho,0.9272727272727272,correlation,10 TMCs,rank association
+local_loto,pti95_mae,0.2763575727650608,PTI points,10 TMCs,bootstrap 95% interval 0.157 to 0.450
+local_loto,pti95_rmse,0.3597569567847962,PTI points,10 TMCs,root mean squared error
+local_loto,pti95_bias,0.03686594037080111,PTI points,10 TMCs,predicted minus observed
+transferability,shrp2_k_outside_local_bootstrap_interval,True,boolean,10 TMCs,supports local recalibration of k; does not by itself establish cross-facility or cross-geography transferability
+comparison,shrp2_overprediction_tmc_count,10,TMCs,10 TMCs,number of TMCs for which SHRP2 predicts PTI95 above observed
+comparison,local_loto_mae_reduction_vs_shrp2,0.7060222063106683,share,10 TMCs,relative reduction in PTI95 MAE

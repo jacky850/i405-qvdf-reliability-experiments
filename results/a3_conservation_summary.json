@@ -1,0 +1,32 @@
+{
+  "dataset": "Caltrans PeMS",
+  "scope": "I-405 South, AM 06:00-10:00, 15 weekdays",
+  "common_support_link_days": 45,
+  "complete_conservation_link_days": 30,
+  "complete_conservation_links": [
+    "L405S-114",
+    "L405S-132"
+  ],
+  "incomplete_sections": [
+    {
+      "link_id": "L405S-115",
+      "unusable_roles": [
+        "upstream",
+        "off_ramp"
+      ]
+    }
+  ],
+  "threshold_1p00_r_squared": {
+    "original_link_throughput": -0.2610901832994583,
+    "upstream_mainline": -0.23823634571501917,
+    "upstream_plus_on": -0.2128881308443753,
+    "upstream_plus_on_minus_off": -0.3334847446892324
+  },
+  "threshold_1p00_spearman": {
+    "original_link_throughput": -0.5349115750737522,
+    "upstream_mainline": -0.3245606095630982,
+    "upstream_plus_on": -0.23912644223480498,
+    "upstream_plus_on_minus_off": -0.4251632452421066
+  },
+  "conclusion": "Upstream and ramp-conservation proxies do not remove the negative duration relationship on this minimum sample. The complete conservation estimate remains a diagnostic, not a validated demand measure."
+}
